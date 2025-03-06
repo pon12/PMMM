@@ -11,4 +11,5 @@ tags={
 	"Fixes"
 }
 name="PMMM"
-supported_version="1.15.4"
+supported_version="1.16.0"
+remote_file_id="3439068425"

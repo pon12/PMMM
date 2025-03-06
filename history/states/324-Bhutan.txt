@@ -1,16 +1,11 @@
-
 state={
 	id=324
 	name="STATE_324"
-	manpower = 450000
-	
-	
+manpower = 0
 	state_category = town
-	
 	resources={
 		tungsten=2 # was: 2
 	}
-
 	history={
 		owner = NIX
 		buildings = {
@@ -23,10 +18,8 @@ state={
 		}
 		add_core_of = NIX
 	}
-
 	provinces={
 		8010 12860 
 	}
-
 	local_supplies=0.0 
 }

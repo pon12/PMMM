@@ -4,10 +4,8 @@ state={
 	provinces={
 		919 3807 3862 3964 11826 11844 
 	}
-	manpower = 531172
-	
+manpower = 0
 	state_category = rural
-
 	history= {
 		owner = NIX
 		victory_points = {
@@ -21,6 +19,5 @@ state={
 		}
 		add_core_of = NIX
 	}
-
 	local_supplies=0.0 
 }

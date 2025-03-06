@@ -1,19 +1,14 @@
 state = {
 	id = 950
 	name = "STATE_950"
-	manpower = 1300000
-	
+manpower = 0
 	state_category = town
-	
 	resources = {
 		steel = 24 # Steel + replacement of copper
 	}
-
 	history = {
-
 		owner = NIX
 		add_core_of = NIX
-
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
@@ -24,20 +19,15 @@ state = {
 				naval_base = 1
 			}
 		}
-		
 		victory_points = {
 			5121 2
 		}
-
 		victory_points = {
 			5169 1
 		}
-
 	}
-
 	provinces = {
 		5121 5169 12920 12954 13297
 	}
-
 	local_supplies = 0.0 
 }

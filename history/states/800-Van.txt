@@ -1,7 +1,6 @@
 state={
 	id=800
 	name="STATE_800" #Van
-
 	history={
 		owner = NIX
 		victory_points = {
@@ -27,12 +26,10 @@ state={
 			add_core_of = NIX
 		}
 	}
-
 	provinces={
 		652 4583 6935 7470 11880 12376 13121 
 	}
-	manpower = 365490
+manpower = 0
 	state_category = rural
-
 	local_supplies=0.0 
 }

@@ -2,14 +2,11 @@ state=
 {
 	id=298
 	name="STATE_298"
-	manpower = 745000
-	
+manpower = 0
 	state_category = rural
 	resources={
 		rubber=6 # was: 7
 	}	
-	
-
 	history= {
 		owner = NIX
 		buildings = {
@@ -28,6 +25,5 @@ state=
 	provinces={
 		7959 8006
 	}
-
 	local_supplies=0.0 
 }

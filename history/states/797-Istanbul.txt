@@ -4,14 +4,12 @@ state={
 	provinces={
 		9833 11829 
 	}
-	manpower = 1042276
+manpower = 0
 	resources={
 		#chromium=45 # was: 84
 		#steel = 10 # was: 20
 	}
-	
 	state_category = city
-
 	history= {
 		owner = NIX
 		victory_points = {
@@ -39,11 +37,9 @@ state={
 			limit = { has_dlc = "Battle for the Bosporus"}
 			set_demilitarized_zone = yes
 		}
-		
 		1936.11.9 = {
 			set_demilitarized_zone = no
 		}
 	}
-
 	local_supplies=0.0 
 }

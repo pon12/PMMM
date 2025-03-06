@@ -1,15 +1,11 @@
 state = {
 	id = 952
 	name = "STATE_952"
-	manpower = 283605
-	
+manpower = 0
 	state_category = town
-
 	history = {
-
 		owner = NIX
 		add_core_of = NIX
-
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -18,16 +14,12 @@ state = {
 				naval_base = 2
 			}
 		}
-
 		victory_points = {
 			5228 2
 		}
-
 	}
-
 	provinces = {
 		5192 5228 11000 12914
 	}
-
 	local_supplies = 0.0 
 }

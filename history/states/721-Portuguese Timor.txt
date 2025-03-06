@@ -1,11 +1,8 @@
-
 state={
 	id=721
 	name="STATE_721"
-	manpower = 455604
-	
+manpower = 0
 	state_category = pastoral
-
 	history={
 		owner = NIX
 		buildings = {
@@ -15,10 +12,8 @@ state={
 			}
 		}
 	}
-
 	provinces={
 		1326 12178 12190 12206 13001 
 	}
-
 	local_supplies=0.0 
 }

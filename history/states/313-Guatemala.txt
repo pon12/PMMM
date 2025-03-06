@@ -1,14 +1,11 @@
-
 state={
 	id=313
 	name="STATE_313"
-	manpower = 1771000
+manpower = 0
 	resources={
 		chromium=4 # was: 6
 	}
-	
 	state_category = town
-
 	history={
 		owner = NIX
 		buildings = {
@@ -27,13 +24,9 @@ state={
 		victory_points = {
 			10886 3 
 		}
-
 	}
-
 	provinces={
 		4991 10842 10886 13085 
 	}
-	
-
 	local_supplies=0.0 
 }

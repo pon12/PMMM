@@ -7,7 +7,6 @@ effect = {
 	# }
 	NIX = {
 		every_owned_state = {
-		add_manpower = -9000000
 		remove_building = {
 			type = arms_factory
 			level = 10
