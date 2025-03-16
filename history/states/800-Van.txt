@@ -3,6 +3,8 @@ state={
 	name="STATE_800" #Van
 	history={
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		victory_points = {
 			6935 5 
 		}

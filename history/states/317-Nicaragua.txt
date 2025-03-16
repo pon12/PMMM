@@ -9,6 +9,8 @@ state={
 
 	history={
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1

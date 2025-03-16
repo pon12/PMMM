@@ -4,6 +4,8 @@ state={
 
 	history={
 		owner = USA
+    add_core_of = NIX
+    add_core_of = NIX
 		buildings = {
 			infrastructure = 1
 			air_base = 1

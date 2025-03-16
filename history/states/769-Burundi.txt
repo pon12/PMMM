@@ -8,6 +8,8 @@ state = {
 	history = {
 
 		owner = BEL
+    add_core_of = NIX
+    add_core_of = NIX
 
 		IF = {
 			limit = {
@@ -19,7 +21,6 @@ state = {
 			}	
 		}
 		
-		add_core_of = BRD
 
 		victory_points = {
 			2220 1

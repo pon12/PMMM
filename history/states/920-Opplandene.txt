@@ -11,6 +11,8 @@ state = {
 			3136 3
 		}
 		owner = NOR
+    add_core_of = NIX
+    add_core_of = NOR
 		add_core_of = NOR
 		buildings = {
 			infrastructure = 2

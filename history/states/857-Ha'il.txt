@@ -6,6 +6,8 @@ state={
 	}
 	history = {
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		add_core_of = NIX
 	}
 	manpower = 0

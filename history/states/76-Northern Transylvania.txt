@@ -8,8 +8,9 @@ state = {
 	history = {
 
 		owner = ROM
+    add_core_of = NIX
+    add_core_of = ROM
 		add_core_of = ROM
-		add_core_of = TRA
 
 		buildings = {
 			infrastructure = 2

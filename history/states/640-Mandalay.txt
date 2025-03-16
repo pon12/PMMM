@@ -10,6 +10,8 @@ state = {
 	
 	history = {
 		owner = BRM
+    add_core_of = NIX
+    add_core_of = BRM
 		add_core_of = BRM
 		victory_points = {
 			1492 3 

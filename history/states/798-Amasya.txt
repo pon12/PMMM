@@ -8,6 +8,8 @@ manpower = 0
 	state_category = rural
 	history= {
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		victory_points = {
 			3862 3
 		}

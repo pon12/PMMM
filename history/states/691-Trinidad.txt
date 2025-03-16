@@ -10,8 +10,9 @@ state={
 
 
 	history={
-		add_core_of = TRI
 		owner = ENG
+    add_core_of = NIX
+    add_core_of = NIX
 		victory_points = {
 			3284 1
 		}

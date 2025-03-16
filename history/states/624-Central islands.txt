@@ -8,6 +8,8 @@ state=
 	history=
 	{
 		owner = PHI
+    add_core_of = NIX
+    add_core_of = PHI
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

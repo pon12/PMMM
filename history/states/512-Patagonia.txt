@@ -8,8 +8,9 @@ manpower = 0
 	}
 	history = {
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		add_core_of = NIX
-		add_core_of = WLA
 		buildings = {
 			infrastructure = 1
 		}

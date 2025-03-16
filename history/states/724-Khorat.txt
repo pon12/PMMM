@@ -12,6 +12,8 @@ state={
 
 	history={
 		owner = SIA
+    add_core_of = NIX
+    add_core_of = SIA
 		buildings = {
 			infrastructure = 2
 			12230 = {

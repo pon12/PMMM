@@ -8,6 +8,8 @@ state={
 
 	history={
 		owner = PER
+    add_core_of = NIX
+    add_core_of = PER
 		victory_points = {
 			7969 5
 		}
@@ -18,7 +20,6 @@ state={
 			infrastructure = 2
 		}
 		add_core_of = PER
-		add_core_of = AZR
 	}
 
 	provinces={

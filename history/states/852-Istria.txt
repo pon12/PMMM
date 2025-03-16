@@ -9,6 +9,8 @@ state = {
 
 	history = {
 		owner = ITA
+    add_core_of = NIX
+    add_core_of = ITA
 		victory_points = { #Fiume (Rijeka)
 			11564 1 
 		}
@@ -20,9 +22,6 @@ state = {
 			}
 		}
 		add_core_of = ITA
-		add_core_of = YUG
-		add_core_of = CRO
-		add_core_of = LBV
 
 		### CHANGED TO A MROE ROBUST SYSTEM
 		##CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES

@@ -24,7 +24,6 @@ state = {
 		}
 
 		owner = CZE
-		add_core_of = CZE
 
 		buildings = {
 
@@ -55,6 +54,8 @@ state = {
 
 		1938.9.30 = {
 			owner = GER
+    add_core_of = NIX
+    add_core_of = GER
 			controller = GER
 			add_core_of = GER
 		}

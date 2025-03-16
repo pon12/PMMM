@@ -7,7 +7,6 @@ state={
 		add_core_of = CHI
 		add_core_of = CHI
 		add_core_of = CHI
-		add_core_of = MEN
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
@@ -20,6 +19,8 @@ state={
 
 			}
 			owner = CHI
+    add_core_of = NIX
+    add_core_of = CHI
 			controller = MEN
 
 		}

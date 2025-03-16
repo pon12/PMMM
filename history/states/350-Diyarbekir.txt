@@ -5,6 +5,8 @@ state={
 
 	history={
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		victory_points = {
 			4512 5 
 		}

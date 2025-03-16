@@ -11,12 +11,13 @@ state={
 			577 1 
 		}
 		owner = ROM
+    add_core_of = NIX
+    add_core_of = ROM
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
 		}
 		add_core_of = ROM
-		add_core_of = UKR
 	}
 	provinces={
 		577 9548

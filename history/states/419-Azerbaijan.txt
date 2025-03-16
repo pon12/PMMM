@@ -9,6 +9,8 @@ state={
 	state_category = rural
 	history={
 		owner = PER
+    add_core_of = NIX
+    add_core_of = PER
 		buildings = {
 			infrastructure = 1
 		}
@@ -20,7 +22,6 @@ state={
 		}
 		add_core_of = PER
 		add_core_of = NIX
-		add_core_of = AZR
 	}
 
 	provinces={

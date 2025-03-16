@@ -10,6 +10,8 @@ state={
 	state_category = town
 	history={
 		owner = PER
+    add_core_of = NIX
+    add_core_of = PER
 		buildings = {
 			infrastructure = 2
 			arms_factory = 2
@@ -19,7 +21,6 @@ state={
 		}
 		add_core_of = PER
 		add_core_of = NIX
-		add_core_of = AZR
 	}
 
 	provinces={

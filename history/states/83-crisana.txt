@@ -8,6 +8,8 @@ state={
 
 	history={
 		owner = ROM
+    add_core_of = NIX
+    add_core_of = ROM
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
@@ -17,7 +19,6 @@ state={
 			6682 1 
 		}
 		add_core_of = ROM
-		add_core_of = TRA
 	}
 
 	provinces={

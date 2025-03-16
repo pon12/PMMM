@@ -4,6 +4,8 @@ state = {
 manpower = 0
 	history = {
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		add_core_of = NIX
 		victory_points = {
 			12758 2 

@@ -5,6 +5,8 @@ state={
 
 	history={
 		owner = ENG
+    add_core_of = NIX
+    add_core_of = ENG
 		victory_points = {
 			3379 5 
 		}
@@ -22,8 +24,6 @@ state={
 			}
 		}
 		add_core_of = ENG
-		add_core_of = IRE
-		add_core_of = NIR
 	}
 
 	provinces={

@@ -9,7 +9,8 @@ state=
 	history=
 	{
 		owner = SPR
-		add_core_of = EQG
+    add_core_of = NIX
+    add_core_of = NIX
 		victory_points = {
 			1903 1 
 		}

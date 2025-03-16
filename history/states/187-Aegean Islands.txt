@@ -12,6 +12,8 @@ state={
 
 	history={
 		owner = GRE
+    add_core_of = NIX
+    add_core_of = GRE
 		buildings = {
 			infrastructure = 1
 			dockyard = 1

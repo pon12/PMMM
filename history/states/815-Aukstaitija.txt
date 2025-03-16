@@ -5,6 +5,8 @@ state={
 
 	history={
 		owner = LIT
+    add_core_of = NIX
+    add_core_of = LIT
 		victory_points = {
 			6229 1 #Panevezys
 		}

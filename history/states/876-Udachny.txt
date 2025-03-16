@@ -4,6 +4,8 @@ state = {
 
 	history = {
 		owner = SOV
+    add_core_of = NIX
+    add_core_of = SOV
 
 		#victory_points = {
 		#	6085 1  #Udachny was founded in 1955
@@ -14,7 +16,6 @@ state = {
 		}
 
 		add_core_of = SOV
-		add_core_of = YAK
 
 	}
 

@@ -14,6 +14,8 @@ state={
 			10329 1
 		}
 		owner = SOV
+    add_core_of = NIX
+    add_core_of = SOV
 		buildings = {
 			infrastructure = 2
 

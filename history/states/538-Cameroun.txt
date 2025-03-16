@@ -11,7 +11,8 @@ state = {
 	history = {
 
 		owner = BEL
-		add_core_of = COG
+    add_core_of = NIX
+    add_core_of = NIX
 
 		IF = {
 			limit = {

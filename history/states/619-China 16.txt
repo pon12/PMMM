@@ -9,9 +9,9 @@ manpower = 0
 	}
 	history={
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		add_core_of = NIX
-		add_core_of = CHI
-		add_core_of = CHI
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

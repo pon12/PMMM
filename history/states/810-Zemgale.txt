@@ -5,6 +5,8 @@ state={
 
 	history={
 		owner = LAT
+    add_core_of = NIX
+    add_core_of = LAT
 		victory_points = {
 			6222 3 #Jelgava
 		}

@@ -8,6 +8,8 @@ state = {
 
 	history = {
 		owner = SOV
+    add_core_of = NIX
+    add_core_of = SOV
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 1
@@ -20,7 +22,6 @@ state = {
 			4354 1 
 		}
 		add_core_of = SOV
-		add_core_of = BSK
 	}
 
 	provinces = {

@@ -5,6 +5,8 @@ manpower = 0
 	state_category = town
 	history={
 		owner = NIX
+    add_core_of = NIX
+    add_core_of = NIX
 		victory_points = {
 			9893 15
 		}

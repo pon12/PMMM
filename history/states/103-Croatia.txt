@@ -9,6 +9,8 @@ state={
 
 	history={
 		owner = YUG
+    add_core_of = NIX
+    add_core_of = YUG
 		victory_points = { #Dubrovnik
 			6889 3 
 		}
@@ -28,7 +30,6 @@ state={
 		}
 		add_core_of = YUG
 		#add_claim_by = ITA #added by focus
-		add_core_of = CRO
 	}
 
 	provinces={

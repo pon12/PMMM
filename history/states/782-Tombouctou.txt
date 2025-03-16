@@ -9,7 +9,8 @@ state={
 
 	history={
 		owner = FRA
-		add_core_of = MLI
+    add_core_of = NIX
+    add_core_of = NIX
 		buildings = {
 			infrastructure = 0
 		}

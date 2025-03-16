@@ -11,6 +11,8 @@ state = {
 	history = {
 
 		owner = BEL
+    add_core_of = NIX
+    add_core_of = NIX
 
 		IF = {
 			limit = {
@@ -26,8 +28,6 @@ state = {
 			infrastructure = 1
 		}
 
-		add_core_of = COG
-		add_core_of = KAT
 
 		victory_points = {
 			191 2 # Elizabehville

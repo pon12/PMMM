@@ -14,12 +14,13 @@ state={
 			9606 3
 		}
 		owner = ROM
+    add_core_of = NIX
+    add_core_of = ROM
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
 		}
 		add_core_of = ROM
-		add_core_of = TRA
 	}
 
 	provinces={

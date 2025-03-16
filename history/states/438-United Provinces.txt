@@ -10,7 +10,9 @@ state={
 	local_supplies=0.000
 	history={
 		owner = RAJ
-		add_claim_by = KHL
+    add_core_of = RAJ
+    add_core_of = NIX
+
 		victory_points = {
 			1377 10
 		}

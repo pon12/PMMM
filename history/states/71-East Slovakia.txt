@@ -14,7 +14,6 @@ state = {
 			industrial_complex = 2
 		}
 
-		add_core_of = CZE
 		add_core_of = SLO
 
 		victory_points = {
@@ -23,6 +22,8 @@ state = {
 
 		1939.3.14 = {
 			owner = SLO
+    add_core_of = NIX
+    add_core_of = SLO
 			controller = SLO
 		}
 	}

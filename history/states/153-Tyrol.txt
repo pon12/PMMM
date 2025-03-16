@@ -12,9 +12,10 @@ state={
 			industrial_complex = 1
 			air_base = 3
 		}
-		add_core_of = AUS
 		1938.3.12 = {
 			owner = GER
+    add_core_of = NIX
+    add_core_of = GER
 			controller = GER
 			add_core_of = GER
 		}

@@ -8,6 +8,8 @@ state={
 
 	history={
 		owner = FRA
+    add_core_of = NIX
+    add_core_of = FRA
 		victory_points = {
 			3552 20
 		}
@@ -34,7 +36,6 @@ state={
 			}
 		}
 		add_core_of = FRA
-		add_core_of = BRI
 		1939.1.1 = {
 			buildings = {
 				dockyard = 5

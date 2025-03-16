@@ -22,6 +22,8 @@ state={
 			1205 1
 		}
 		owner = GRE
+    add_core_of = NIX
+    add_core_of = GRE
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
