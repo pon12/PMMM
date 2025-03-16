@@ -10,8 +10,6 @@ NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
 
-
-
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0 	
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0	
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0 	
@@ -31,18 +29,7 @@ NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0.0
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.5
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 30
 
-Defines.NMilitary.RIVER_CROSSING_PENALTY = -0.3                 -- small river crossing
-NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.5           -- large river crossing
-NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.25           -- small river crossing
-NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.5     -- large river crossing
-
-NDefines.NMilitary.COMBAT_MOVEMENT_SPEED = 0.33 -- VANILLA 0.33
-NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.05	-- VANILLA 0.05
-NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.25		-- VANILLA 0.25 
-NDefines.NMilitary.WITHDRAWING_SPEED_FACTOR = 0.15	-- VANILLA 0.15
-NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.0525 -- VANILLA 0.0525
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.053	-- VANILLA 0.053
-NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5		-- VANILLA 4 -- Min height of regiments in division designer.
+NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5
 
 NDefines.NAI.JOIN_ALLY_BASE_DESIRE = -500					
 NDefines.NAI.JOIN_ALLY_DEMOCRATIC_DESIRE = 0		
