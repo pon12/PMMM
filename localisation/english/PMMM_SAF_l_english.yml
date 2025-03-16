@@ -1,0 +1,107 @@
+﻿l_english:
+JFU_SAF_desc:0 "To Pass our Bills we need Politcal Support of some Groups in our Country\nSupport and Influence of Politcal Movements:\n\ngOssewabrandwag!:\n GSupport!: [?SAF_1_Support]\n YInfluence!: [?SAF_1_Influence]\n\ntBritish Loyalists!:\n GSupport!: [?SAF_2_Support]\n YInfluence!: [?SAF_2_Influence]\n\n3Equality Movement!:\n GSupport!: [?SAF_3_Support]\n YInfluence!: [?SAF_3_Influence]\n\ng4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -20 Stability and the Max ist +10 Stability!"
+
+SAF_modifier_tt_test1:0 "8Support and Influence of Politcal Movements:!\ngOssewabrandwag!:\n GSupport!: [?SAF_1_Support]\n YInfluence!: [?SAF_1_Influence]\n\ntBritish Loyalists!:\n GSupport!: [?SAF_2_Support]\n YInfluence!: [?SAF_2_Influence]\n\n3Equality Movement!:\n GSupport!: [?SAF_3_Support]\n YInfluence!: [?SAF_3_Influence]\n\nYEffects:!"
+SAF_Politcal_manuevering_i:0 "Politcal Maneuvering"
+JFU_SAF:0 "Politcal Maneuvering"
+SAF_seek_political_support:0 "Seek Political Support"
+SAF_tt_start_pm:0 "GEnables! the YDecisions! for the YPolitical Support! !\n\n\n"
+SAF_D_PM_secure_british_trade_deal:0 "Secure British Trade Deal"
+SAF_D_PM_secure_german_trade_deal:0 "Secure German Trade Deal"
+SAF_D_PM_secure_american_trade_deal:0 "Secure American Trade Deal"
+SAF_D_PM_appoint_new_prime_minister:0 "Appoint New Prime Minister"
+SAF_update_mission:0 "Stability Update"
+SAF_D_PM_more_rights_to_b:0 "Expand rights of the Majority"
+SAF_D_PM_more_rights_to_w:0 "Expand rights of the Minorety"
+SAF_D_PM_backroom_deals_1:0 "Backroom deals with Ossewabrandwag"
+SAF_D_PM_backroom_deals_2:0 "Backroom deals with British Loyalists"
+SAF_D_PM_backroom_deals_3:0 "Backroom deals with Equality Movement"
+
+SAF_expand_the_mining_industry2:0 "Start the Rearmarment"
+SAF_expand_the_mining_industry3:0 "Nationalize the Industry"
+
+timeout_effect_tt:0 "g4Every 30 Days! for the YPoint differences! between YInfluence! and GSupport!\nY0.1 Stability! will be Gadded! if the GSupport! is Yhigher! than the YInflunece! and Rremoved! if YInfluence! is Yhigher! than GSupport! \nThe Min is -20 Stability and the Max is +10 Stability!"
+
+SAF_D_PM_fight_influence_of_1:0 "Fight Influence of Ossewabrandwag"
+SAF_D_PM_fight_influence_of_2:0 "Fight Influence of British Loyalists"
+SAF_D_PM_fight_influence_of_3:0 "Fight Influence of Equality Movement"
+
+SAF_1_influence_max_25:0 "YInflunece! of gOssewabrandwag! is 4less than !Y25!"
+SAF_1_influence_max_35:0 "YInflunece! of gOssewabrandwag! is 4less than !Y35!"
+SAF_3_influence_max_25:0 "YInflunece! of 3Equality Movement! is 4less than !Y25!"
+SAF_3_influence_max_35:0 "YInflunece! of 3Equality Movement! is 4less than !Y35!"
+SAF_3_influence_max_40:0 "YInflunece! of 3Equality Movement! is 4less than !Y40!"
+SAF_3_influence_min_20:0 "YInflunece! of 3Equality Movement! is 4more than !Y20!"
+SAF_3_influence_min_30:0 "YInflunece! of 3Equality Movement! is 4more than !Y30!"
+SAF_2_influence_min_60:0 "YInflunece! of tBritish Loyalists! is 4more than !Y60!"
+SAF_2_influence_max_50:0 "YInflunece! of tBritish Loyalists! is 4less than !Y50!"
+SAF_2_influence_min_50:0 "YInflunece! of tBritish Loyalists! is 4more than !Y50!"
+
+SAF_1_support_min_30:0 "GSupport! of gOssewabrandwag! is 4more than !Y30!"
+
+SAF_tt_test1:0 "Modify YPolitical Maneuvering! by\n YConsumer Goods Factories Factor!: G-5%!"
+SAF_tt_test2:0 "Modify YPolitical Maneuvering! by\n YRessource Gain Efficiency!: G+10%!"
+SAF_tt_test3:0 "Modify YPolitical Maneuvering! by\n YWar Support!: G+5%!"
+SAF_tt_test4:0 "Modify YPolitical Maneuvering! by\n YWar Support!: G+10%!\n\n"
+SAF_tt_test1_1:0 "Modify YPolitical Maneuvering! by\n YConsumer Goods Factories Factor!: G-10%!\n\n"
+SAF_tt_test5:0 "Modify YPolitical Maneuvering! by\n YStability!: G+5%!"
+SAF_tt_test6:0 "Modify YPolitical Maneuvering! by\n YWar Support!: G+2%!"
+#SAF PM Ossewabrandwag
+SAF_tt_1_5_support:0 "gOssewabrandwag!: \n G+5 Support!\n\n" #add_to_variable = { SAF_1_Support = 5}
+SAF_tt_1_10_support:0 "gOssewabrandwag!: \n G+10 Support!\n\n" #add_to_variable = { SAF_1_Support = 10}
+SAF_tt_1_-5_support:0 "gOssewabrandwag!: \n R-5! GSupport!\n\n" #add_to_variable = { SAF_1_Support = -5}
+SAF_tt_1_-10_support:0 "gOssewabrandwag!: \n R-10! GSupport!\n\n" #add_to_variable = { SAF_1_Support = -10}
+
+SAF_tt_1_5_influence:0 "gOssewabrandwag!: \n G+5! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = 5}
+SAF_tt_1_10_influence:0 "gOssewabrandwag!: \n G+10! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = 10}
+SAF_tt_1_-5_influence:0 "gOssewabrandwag!: \n R-5! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = -5}
+SAF_tt_1_-10_influence:0 "gOssewabrandwag!: \n R-10! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = -10}
+
+#SAF PM British Loyalists
+SAF_tt_2_5_support:0 "tBritish Loyalists!: \n G+5 Support!\n\n" #add_to_variable = { SAF_2_Support = 5}
+SAF_tt_2_10_support:0 "tBritish Loyalists!: \n G+10 Support!\n\n" #add_to_variable = { SAF_2_Support = 10}
+SAF_tt_2_-5_support:0 "tBritish Loyalists!: \n R-5! GSupport!\n\n" #add_to_variable = { SAF_2_Support = -5}
+SAF_tt_2_-10_support:0 "tBritish Loyalists!: \n R-10! GSupport!\n\n" #add_to_variable = { SAF_2_Support = -10}
+
+SAF_tt_2_5_influence:0 "tBritish Loyalists!: \n G+5! YInfluence!\n\n" #add_to_variable = { SAF_2_Influence = 5}
+SAF_tt_2_10_influence:0 "tBritish Loyalists!: \n G+10! YInfluence!\n\n" #add_to_variable = { SAF_2_Influence = 10}
+SAF_tt_2_-5_influence:0 "tBritish Loyalists!: \n R-5! YInfluence!\n\n" #add_to_variable = { SAF_2_Influence = -5}
+SAF_tt_2_-10_influence:0 "tBritish Loyalists!: \n R-10! YInfluence!\n\n" #add_to_variable = { SAF_2_Influence = -10}
+
+#SAF PM Equality Movement
+SAF_tt_3_5_support:0 "3Equality Movement!: \n G+5 Support!\n\n" #add_to_variable = { SAF_3_Support = 5}
+SAF_tt_3_10_support:0 "3Equality Movement!: \n G+10 Support!\n\n" #add_to_variable = { SAF_3_Support = 10}
+SAF_tt_3_-5_support:0 "3Equality Movement!: \n R-5! GSupport!\n\n" #add_to_variable = { SAF_3_Support = -5}
+SAF_tt_3_-10_support:0 "3Equality Movement!: \n R-10! GSupport!\n\n" #add_to_variable = { SAF_3_Support = -10}
+
+SAF_tt_3_5_influence:0 "3Equality Movement!: \n G+5! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = 5}
+SAF_tt_3_10_influence:0 "3Equality Movement!: \n G+10! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = 10}
+SAF_tt_3_-5_influence:0 "3Equality Movement!: \n R-5! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = -5}
+SAF_tt_3_-10_influence:0 "3Equality Movement!: \n R-10! YInfluence!\n\n" #add_to_variable = { SAF_1_Influence = -10}
+
+
+
+SAF_modify_dynamicm_tt:0 "Modify YFast Rearmament! by"
+SAF_Fast_Reamarment_i:0 "Fast Rearmament"
+SAF_mil_industry1:0 "Expand Military Industry"
+SAF_mil_industry2:0 "Military Resources"
+SAF_mil_industry3:0 "Maximize Production"
+SAF_heavy_engineering2:0 "Industrial Heart of Africa"
+SAF_Fast_Reamarment_i_desc:0 "The Effects will be lowered after completing YWar Measures Act!"
+
+
+
+ CAN_IND1:0 "Industrial Focus"
+ CAN_Develope_Ontario:0 "Develope Ontario"
+ CAN_Develope_Quebec:0 "Develope Quebec"
+ CAN_Develope_Columbia:0 "Develope Columbia"
+ CAN_Civs_Ontario:0 "Civilian Investment in Ontario"
+ CAN_Civs_Quebec:0 "Civilian Investment in Quebec"
+ CAN_Civs_Columbia:0 "Civilian Investment in Columbia"
+ CAN_Mills_Ontario:0 "Military Investment in Ontario"
+ CAN_Mills_Quebec:0 "Military Investment in Quebec"
+ CAN_Mills_Columbia:0 "Military Investment in Columbia"
+ CAN_Resources_Ontario:0 "Mine Ressources in Ontario"
+ CAN_Resources_Columbia:0 "Mine Ressources in Columbia"
+ CAN_Industrie_Idee:0 "Civil Investment"
+ CAN_Industrie2_Idee:0 "Military Investment"

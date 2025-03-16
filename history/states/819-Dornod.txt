@@ -9,9 +9,7 @@ state={
 		owner = NIX
     add_core_of = NIX
     add_core_of = NIX
-		buildings = {
-			infrastructure = 1
-		}
+		buildings = {}
 		victory_points = {
 			12557 1 #Choibalsan
 		}

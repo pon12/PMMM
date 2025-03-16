@@ -8,11 +8,7 @@ manpower = 0
     add_core_of = NIX
     add_core_of = NIX
 		add_core_of = NIX
-		buildings = {
-			infrastructure = 2
-			# Minister Pistarini Reservoir
-			5152 = { dam = 1 }
-		}
+		buildings = {}
 		victory_points = {
 			12942 2 # Córdoba
 		}

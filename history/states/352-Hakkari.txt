@@ -16,9 +16,7 @@ manpower = 0
 		victory_points = {
 			10497 1 
 		}
-		buildings = {
-			infrastructure = 1
-		}
+		buildings = {}
 		if = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"

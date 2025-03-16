@@ -7,10 +7,7 @@ state={
     add_core_of = NIX
     add_core_of = NIX
 		add_core_of = NIX
-		buildings = {
-			infrastructure = 1
-
-		}
+		buildings = {}
 		victory_points = {
 			4973 1
 		}

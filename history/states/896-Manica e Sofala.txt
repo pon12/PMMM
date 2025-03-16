@@ -7,9 +7,7 @@ manpower = 0
 		owner = NIX
     add_core_of = NIX
     add_core_of = NIX
-		buildings = {
-			infrastructure = 2
-		}
+		buildings = {}
 	}
 	provinces={
 		2120 5155 12935 12950 

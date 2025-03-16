@@ -5,12 +5,7 @@ state={
 		owner = NIX
     add_core_of = NIX
     add_core_of = NIX
-		buildings = {
-			infrastructure = 1
-			2115 = {
-				naval_base = 1
-			}
-		}
+		buildings = {}
 		victory_points = {
 			2115 1 
 		}

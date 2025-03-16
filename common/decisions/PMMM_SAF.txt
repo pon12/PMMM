@@ -1,0 +1,419 @@
+JFU_SAF = {
+	
+	SAF_D_PM_appoint_new_prime_minister = { 
+		icon = eng_trade_unions_demand
+		fire_only_once = yes
+		allowed = { tag = SAF }	
+		available = { 
+			has_completed_focus = SAF_seek_political_support
+			OR = {has_war = yes
+	
+		custom_trigger_tooltip = {
+			tooltip = SAF_2_influence_max_50
+			check_variable = {
+				SAF_2_Influence < 50
+			}
+		}}
+	}		
+		cost = 0
+		#target_array = ENG
+		complete_effect = { 
+			hidden_effect = {recruit_character = SAF_jan_smuts}
+			
+	promote_character = SAF_jan_smuts
+	add_political_power = 100
+	add_to_variable = {
+		var = var_SAF_wars
+		value = 0.1
+		tooltip = SAF_tt_test4
+	}
+	custom_effect_tooltip = SAF_tt_2_10_support
+	add_to_variable = { SAF_2_Support = 10}
+	custom_effect_tooltip = SAF_tt_3_10_support
+	add_to_variable = { SAF_3_Support = 10}
+	custom_effect_tooltip = SAF_tt_1_-5_support
+	add_to_variable = { SAF_1_Support = -5}
+	hidden_effect = {retire_character = SAF_j_b_m_hertzog}
+	add_country_leader_trait = democratic_crusader
+			}
+		}
+	
+
+	SAF_D_PM_secure_british_trade_deal = { 
+		icon = gre_investment_decisions
+		fire_only_once = yes
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support}		
+		cost = 50
+		#target_array = ENG
+		complete_effect = { 
+			custom_effect_tooltip = SAF_tt_2_10_support
+			custom_effect_tooltip = SAF_tt_2_5_influence
+			add_to_variable = { SAF_2_Support = 10}
+			add_to_variable = { SAF_2_Influence = 5}
+			add_to_variable = {
+				var = var_SAF_resc
+				value = 0.1
+				tooltip = SAF_tt_test2
+			}
+		}
+	}
+	SAF_D_PM_secure_german_trade_deal = { 
+		icon = gre_investment_decisions
+		fire_only_once = yes
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support}		
+		cost = 50
+		#target_array = GER
+		complete_effect = { 
+			custom_effect_tooltip = SAF_tt_1_10_support
+			custom_effect_tooltip = SAF_tt_1_5_influence
+			add_to_variable = { SAF_1_Support = 10}
+			add_to_variable = { SAF_1_Influence = 5}
+			
+			add_to_variable = {
+				var = var_SAF_wars
+				value = 0.05
+				tooltip = SAF_tt_test3
+			}
+		}
+	}
+	##
+	SAF_D_PM_secure_american_trade_deal = { 
+		icon = gre_investment_decisions
+		fire_only_once = yes
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support}		
+		cost = 50
+		#target_array = USA
+		complete_effect = { 
+			custom_effect_tooltip = SAF_tt_3_10_support
+			custom_effect_tooltip = SAF_tt_3_5_influence
+			add_to_variable = { SAF_3_Support = 10}
+			add_to_variable = { SAF_3_Influence = 5}
+			add_to_variable = {
+				var = var_SAF_consg
+				value = -0.05
+				tooltip = SAF_tt_test1
+			}
+		}
+	}
+	SAF_D_PM_more_rights_to_b = { 
+		icon = eng_trade_unions_support
+		fire_only_once = no
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support 
+		}		
+		cost = 10
+		days_re_enable = 200
+		#target_array = USA
+		complete_effect = { 
+			custom_effect_tooltip = SAF_tt_3_5_support
+			custom_effect_tooltip = SAF_tt_3_5_influence
+			custom_effect_tooltip = SAF_tt_1_-5_support
+			add_to_variable = { SAF_3_Support = 5}
+			add_to_variable = { SAF_1_Support = -5}
+			add_to_variable = { SAF_3_Influence = 5}
+			add_to_variable = {
+				var = var_SAF_stab
+				value = 0.05
+				tooltip = SAF_tt_test5
+			}
+		}
+	}
+	SAF_D_PM_more_rights_to_w = { 
+		icon = eng_trade_unions_support
+		fire_only_once = no
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support 
+		}			
+		cost = 10
+		days_re_enable = 200
+		#target_array = USA
+		complete_effect = { 
+			custom_effect_tooltip = SAF_tt_3_-5_support
+			custom_effect_tooltip = SAF_tt_1_5_support
+			custom_effect_tooltip = SAF_tt_1_5_influence
+			add_to_variable = { SAF_3_Support = -5}
+			add_to_variable = { SAF_1_Support = 5}
+			add_to_variable = { SAF_1_Influence = 5}
+			add_to_variable = {
+				var = var_SAF_wars
+				value = 0.02
+				tooltip = SAF_tt_test6
+			}
+		}
+	}
+	SAF_D_PM_fight_influence_of_1 = { 
+		icon = generic_political_discourse
+		fire_only_once = no
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support 
+		}			
+		cost = 20
+		days_re_enable = 100
+		#target_array = USA
+		complete_effect = { 
+		
+			custom_effect_tooltip = SAF_tt_1_-5_influence
+			
+			add_to_variable = { SAF_1_Influence = -5}
+			
+		}
+	}
+	SAF_D_PM_fight_influence_of_2 = { 
+		icon = generic_political_discourse
+		fire_only_once = no
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support 
+		}			
+		cost = 20
+		days_re_enable = 100
+		#target_array = USA
+		complete_effect = { 
+		
+			custom_effect_tooltip = SAF_tt_2_-5_influence
+			
+			add_to_variable = { SAF_2_Influence = -5}
+			
+		}
+	}
+	SAF_D_PM_fight_influence_of_3 = { 
+		icon = generic_political_discourse
+		fire_only_once = no
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support 
+		}			
+		cost = 20
+		days_re_enable = 100
+		#target_array = USA
+		complete_effect = { 
+		
+			custom_effect_tooltip = SAF_tt_3_-5_influence
+			
+			add_to_variable = { SAF_3_Influence = -5}
+			
+		}
+	}
+
+	SAF_D_PM_backroom_deals_1 = { 
+		icon = eng_ally_imperialist_coup
+		fire_only_once = no
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support 
+		}			
+		cost = 30
+		days_re_enable = 200
+		#target_array = USA
+		complete_effect = { 
+		
+			custom_effect_tooltip = SAF_tt_1_5_influence
+			custom_effect_tooltip = SAF_tt_1_5_support
+			add_to_variable = { SAF_1_Influence = 5}
+			add_to_variable = { SAF_1_support = 5}
+		}
+	}
+	SAF_D_PM_backroom_deals_2 = { 
+		icon = eng_ally_imperialist_coup
+		fire_only_once = no
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support 
+		}			
+		cost = 30
+		days_re_enable = 200
+		#target_array = USA
+		complete_effect = { 
+		
+			custom_effect_tooltip = SAF_tt_2_5_influence
+			custom_effect_tooltip = SAF_tt_2_5_support
+			add_to_variable = { SAF_2_Influence = 5}
+			add_to_variable = { SAF_2_support = 5}
+		}
+	}
+	SAF_D_PM_backroom_deals_3 = { 
+		icon = eng_ally_imperialist_coup
+		fire_only_once = no
+		allowed = { tag = SAF }	
+		available = { has_completed_focus = SAF_seek_political_support 
+		}			
+		cost = 30
+		days_re_enable = 200
+		#target_array = USA
+		complete_effect = { 
+		
+			custom_effect_tooltip = SAF_tt_3_5_influence
+			custom_effect_tooltip = SAF_tt_3_5_support
+			add_to_variable = { SAF_3_Influence = 5}
+			add_to_variable = { SAF_3_support = 5}
+		}
+	}
+	
+	SAF_update_mission = {
+		activation = {
+			has_completed_focus = SAF_seek_political_support
+			
+			
+		}
+		available = {
+			#check_variable = {var_SAF_stab > -0.10}
+			#check_variable = {var_SAF_stab < 0.2}
+			always = no
+		}
+		cancel_trigger = {
+			
+		}
+		fire_only_once = no
+		icon = mission_icon     # For GFX_decision_mission_icon
+		is_good = no
+		days_re_enable = 1
+		days_mission_timeout = 30
+		selectable_mission = no
+		
+		complete_effect = {
+		
+		}
+		timeout_effect = {
+			custom_effect_tooltip = timeout_effect_tt
+			if = {
+				limit = {check_variable = { SAF_1_Support < SAF_1_Influence} 
+						check_variable = {
+							var_SAF_stab > -0.20
+						}
+			}
+			add_to_variable = {
+				var = SAF_1_Unterstuertzung_Unterschied
+				value = SAF_1_Support
+			}
+			subtract_from_variable = {
+				var = SAF_1_Unterstuertzung_Unterschied
+				value = SAF_1_Influence
+			}
+			divide_variable = {var = SAF_1_Unterstuertzung_Unterschied
+			value = 1000}
+			add_to_variable = {
+				var = var_SAF_stab
+				value = SAF_1_Unterstuertzung_Unterschied
+			}	
+			clear_variable = SAF_1_Unterstuertzung_Unterschied
+		}
+		else_if = {
+			limit = {check_variable = { SAF_1_Support > SAF_1_Influence} 
+					check_variable = {
+						var_SAF_stab < 0.10
+					}
+		}
+
+			add_to_variable = {
+				var = SAF_1_Unterstuertzung_Unterschied
+				value = SAF_1_Support
+			}
+			subtract_from_variable = {
+				var = SAF_1_Unterstuertzung_Unterschied
+				value = SAF_1_Influence
+			}
+			divide_variable = {var = SAF_1_Unterstuertzung_Unterschied
+			value = 1000}
+			add_to_variable = {
+				var = var_SAF_stab
+				value = SAF_1_Unterstuertzung_Unterschied
+			}	
+			clear_variable = SAF_1_Unterstuertzung_Unterschied
+	}
+	########################
+	if = {
+		limit = {check_variable = { SAF_2_Support < SAF_2_Influence} 
+				check_variable = {
+					var_SAF_stab > -0.20
+				}
+	}
+	add_to_variable = {
+		var = SAF_2_Unterstuertzung_Unterschied
+		value = SAF_2_Support
+	}
+	subtract_from_variable = {
+		var = SAF_2_Unterstuertzung_Unterschied
+		value = SAF_2_Influence
+	}
+	divide_variable = {var = SAF_2_Unterstuertzung_Unterschied
+	value = 1000}
+	add_to_variable = {
+		var = var_SAF_stab
+		value = SAF_2_Unterstuertzung_Unterschied
+	}	
+	clear_variable = SAF_2_Unterstuertzung_Unterschied
+}
+else_if = {
+	limit = {check_variable = { SAF_2_Support > SAF_2_Influence} 
+			check_variable = {
+				var_SAF_stab < 0.10
+			}
+}
+
+	add_to_variable = {
+		var = SAF_2_Unterstuertzung_Unterschied
+		value = SAF_2_Support
+	}
+	subtract_from_variable = {
+		var = SAF_2_Unterstuertzung_Unterschied
+		value = SAF_2_Influence
+	}
+	divide_variable = {var = SAF_2_Unterstuertzung_Unterschied
+	value = 1000}
+	add_to_variable = {
+		var = var_SAF_stab
+		value = SAF_2_Unterstuertzung_Unterschied
+	}	
+	clear_variable = SAF_2_Unterstuertzung_Unterschied
+}
+###################
+if = {
+	limit = {check_variable = { SAF_3_Support < SAF_3_Influence} 
+			check_variable = {
+				var_SAF_stab > -0.20
+			}
+}
+add_to_variable = {
+	var = SAF_3_Unterstuertzung_Unterschied
+	value = SAF_3_Support
+}
+subtract_from_variable = {
+	var = SAF_3_Unterstuertzung_Unterschied
+	value = SAF_3_Influence
+}
+divide_variable = {var = SAF_3_Unterstuertzung_Unterschied
+value = 1000}
+add_to_variable = {
+	var = var_SAF_stab
+	value = SAF_3_Unterstuertzung_Unterschied
+}	
+clear_variable = SAF_3_Unterstuertzung_Unterschied
+}
+else_if = {
+limit = {check_variable = { SAF_3_Support > SAF_3_Influence} 
+		check_variable = {
+			var_SAF_stab < 0.10
+		}
+}
+
+add_to_variable = {
+	var = SAF_3_Unterstuertzung_Unterschied
+	value = SAF_3_Support
+}
+subtract_from_variable = {
+	var = SAF_3_Unterstuertzung_Unterschied
+	value = SAF_3_Influence
+}
+divide_variable = {var = SAF_3_Unterstuertzung_Unterschied
+value = 1000}
+add_to_variable = {
+	var = var_SAF_stab
+	value = SAF_3_Unterstuertzung_Unterschied
+}	
+clear_variable = SAF_3_Unterstuertzung_Unterschied
+}
+
+
+		}
+	}
+}
+

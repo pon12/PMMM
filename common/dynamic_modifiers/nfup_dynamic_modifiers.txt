@@ -1,0 +1,96 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for 
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+SAF_Politcal_manuevering_i = {
+	enable = { always = yes }
+	
+	icon = GFX_idea_ARG_political_corruption_modifier
+	
+	#modifier = {
+	
+	stability_factor = var_SAF_stab
+	war_support_factor = var_SAF_wars
+	consumer_goods_factor = var_SAF_consg
+	local_resources_factor = var_SAF_resc
+
+
+	custom_modifier_tooltip = SAF_modifier_tt_test1
+	#}
+}
+SAF_Fast_Reamarment_i = {
+	enable = { always = yes }
+	
+	icon = GFX_idea_ARG_rapid_militarization
+	
+	#modifier = {
+	
+	stability_factor = var_SAF_2_stab
+	war_support_factor = var_SAF_2_wars
+	consumer_goods_factor = var_SAF_2_consg
+	production_factory_max_efficiency_factor = var_SAF_2_maxeff
+	production_factory_efficiency_gain_factor = var_SAF_2_effgain
+	production_lack_of_resource_penalty_factor = var_SAF_2_ressourcepen
+	production_speed_arms_factory_factor = var_SAF_2_factoryspeed
+	production_speed_industrial_complex_factor = var_SAF_2_civspeed
+	economy_cost_factor = var_SAF_2_law1
+	trade_laws_cost_factor = var_SAF_2_law2
+	mobilization_laws_cost_factor = var_SAF_2_law3
+	local_resources_factor = var_SAF_2_resc
+
+	
+	#}
+}
+
+# YUG_Yugoslavian_cooperation = {
+# 	enable = { always = yes }
+	
+# 	icon = GFX_idea_ARG_subdue_dissension
+	
+# 	#modifier = {
+	
+# 	stability_factor = var_YUG_stab
+# 	political_power_factor = var_YUG_pp
+# 	war_support_factor = var_YUG_wars
+# 	consumer_goods_factor = var_YUG_consum
+# 	production_factory_max_efficiency_factor = var_YUG_eff_max
+# 	production_factory_efficiency_gain_factor = var_YUG_eff_gain
+# 	production_lack_of_resource_penalty_factor = var_YUG_resource
+# 	production_speed_arms_factory_factor = var_YUG_mil_speed
+# 	production_speed_industrial_complex_factor = var_YUG_civ_speed
+# 	production_speed_buildings_factor = var_YUG_build_speed
+# 	global_building_slots_factor = var_YUG_build_slots
+# 	conscription_factor = var_YUG_rec_pop
+# 	economy_cost_factor = var_YUG_law1
+# 	trade_laws_cost_factor = var_YUG_law2
+# 	mobilization_laws_cost_factor = var_YUG_law3
+# 	local_resources_factor = var_YUG_resc
+# 	fascism_drift = var_YUG_fascism
+
+	
+# 	#}
+# }

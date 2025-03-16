@@ -11,9 +11,7 @@ state={
 		owner = NIX
     add_core_of = NIX
     add_core_of = NIX
-		buildings = {
-			infrastructure = 1
-		}
+		buildings = {}
 		add_core_of = NIX
 
 	}

@@ -6,10 +6,7 @@ state={
 		owner = NIX
     add_core_of = NIX
     add_core_of = NIX
-		buildings = {
-			infrastructure = 0
-
-		}
+		buildings = {}
 		add_core_of = NIX
 
 	}

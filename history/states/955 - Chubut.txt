@@ -11,12 +11,7 @@ manpower = 0
     add_core_of = NIX
     add_core_of = NIX
 		add_core_of = NIX
-		buildings = {
-			infrastructure = 1
-			10953 = {
-				naval_base = 1
-			}
-		}
+		buildings = {}
 		victory_points = {
 			13307 2 
 		}
