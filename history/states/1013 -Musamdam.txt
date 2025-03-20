@@ -11,10 +11,9 @@ state = {
 
 	history = {
 		
-		owner = OMA
+		owner = ENG
     add_core_of = NIX
-    add_core_of = OMA
-		add_core_of = OMA
+
 
 		buildings = {
 			infrastructure = 1
