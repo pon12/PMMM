@@ -1,0 +1,15 @@
+state={
+	id=1018
+	name="STATE_1018"
+	provinces={
+		1060 10785 11951 
+	}
+	history = {
+		owner = ITA
+		add_core_of = NIX
+	}
+	manpower=3620
+	state_category=wasteland
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}
