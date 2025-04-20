@@ -8,7 +8,6 @@ effect = {
 	LIT = { country_lock_all_division_template = yes }
 	LAT = { country_lock_all_division_template = yes }
 	NIX = { country_lock_all_division_template = yes }
-	
 	PHI = { country_lock_all_division_template = yes }
 	MAL = { country_lock_all_division_template = yes }
 	NZL = { country_lock_all_division_template = yes }
@@ -19,13 +18,16 @@ effect = {
 	IRQ = { country_lock_all_division_template = yes }
 	BRM = { country_lock_all_division_template = yes }
 	COG = { country_lock_all_division_template = yes }
+	IRE = { country_lock_all_division_template = yes }
+	INS = { country_lock_all_division_template = yes }
 	#brauchen noch spawn ins
 	GRE = { country_lock_all_division_template = yes }
-	AUS = { country_lock_all_division_template = yes } # fuer de nach anschluss
+	AUS = { country_lock_all_division_template = yes } #fertig
 	CHI = { country_lock_all_division_template = yes }
-	HOL = { country_lock_all_division_template = yes }
-	POL = { country_lock_all_division_template = yes }
+	HOL = { country_lock_all_division_template = yes } #fertig
+	POL = { country_lock_all_division_template = yes } #fertig
 	NOR = { country_lock_all_division_template = yes }
+	BEL = { country_lock_all_division_template = yes } #fertig
 
 
 	SAF = {

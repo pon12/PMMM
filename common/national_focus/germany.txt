@@ -8619,6 +8619,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				GER = { load_oob = "AUS_war_spawnins"}
+
+			}
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
@@ -10138,6 +10142,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 		
 		completion_reward = {
+			
+			hidden_effect = {
+				POL = { load_oob = "POL_war_spawnins" }	
+
+			}
+			
+			
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			if = {
 				limit = {
@@ -10355,10 +10366,15 @@ focus_tree = {
 			}
 		}
 
+
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
 			#limit wargoals to when it makes sense to give them. No faction, war or non exist
+			hidden_effect = {
+				HOL = { load_oob = "HOL_war_spawnins"}
+				BEL = { load_oob = "BEL_war_spawnins"}
+			}
 			if = { 
 				limit = {
 					country_exists = BEL
@@ -10521,6 +10537,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				DEN = { load_oob = "DEN_war_spawnins"}
+				NOR = { load_oob = "NOR_war_spawnins"}
+			}
 
 			if = {
 				limit = {
