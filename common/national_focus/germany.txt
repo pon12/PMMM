@@ -10142,10 +10142,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 		
 		completion_reward = {
+		
 			
 			hidden_effect = {
 				POL = { load_oob = "POL_war_spawnins" }	
-
+				every_country = { remove_ideas = player_training }
 			}
 			
 			
