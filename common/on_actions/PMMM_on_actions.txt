@@ -1,6 +1,32 @@
 on_actions = {
 on_startup = {
 effect = {
+	#Stop ai unit spam
+	SWE = { country_lock_all_division_template = yes }
+	DEN = { country_lock_all_division_template = yes }
+	EST = { country_lock_all_division_template = yes }
+	LIT = { country_lock_all_division_template = yes }
+	LAT = { country_lock_all_division_template = yes }
+	NIX = { country_lock_all_division_template = yes }
+	
+	PHI = { country_lock_all_division_template = yes }
+	MAL = { country_lock_all_division_template = yes }
+	NZL = { country_lock_all_division_template = yes }
+	LUX = { country_lock_all_division_template = yes }
+	SWI = { country_lock_all_division_template = yes }
+	CZE = { country_lock_all_division_template = yes }
+	PER = { country_lock_all_division_template = yes }
+	IRQ = { country_lock_all_division_template = yes }
+	BRM = { country_lock_all_division_template = yes }
+	COG = { country_lock_all_division_template = yes }
+	#brauchen noch spawn ins
+	GRE = { country_lock_all_division_template = yes }
+	AUS = { country_lock_all_division_template = yes } # fuer de nach anschluss
+	CHI = { country_lock_all_division_template = yes }
+	HOL = { country_lock_all_division_template = yes }
+	POL = { country_lock_all_division_template = yes }
+	NOR = { country_lock_all_division_template = yes }
+
 
 	SAF = {
 		set_variable = { SAF_1_Support = 10}
