@@ -5,6 +5,12 @@ JFU_SAF = {
 	}	
 }
 
+PMMM_FRA = {
+	icon = generic_political_actions
+	visible = {
+	}	
+}
+
 # SOV_winter_war_d = {
 
 # 	priority = 102

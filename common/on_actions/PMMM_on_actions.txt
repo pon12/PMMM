@@ -21,7 +21,7 @@ effect = {
 	IRE = { country_lock_all_division_template = yes }
 	INS = { country_lock_all_division_template = yes }
 	#brauchen noch spawn ins
-	GRE = { country_lock_all_division_template = yes } 
+	GRE = { country_lock_all_division_template = yes } #fertig
 	AUS = { country_lock_all_division_template = yes } #fertig
 	CHI = { country_lock_all_division_template = yes } #fertig
 	HOL = { country_lock_all_division_template = yes } #fertig
@@ -30,6 +30,7 @@ effect = {
 	BEL = { country_lock_all_division_template = yes } #fertig
 
 every_country = {
+	limit = { NOT = {TAG = ETH} NOT = {TAG=AFA} NOT = {TAG=NIX}NOT = {TAG=CHI}}
 	add_ideas = player_training
 
 }

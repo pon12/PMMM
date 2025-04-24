@@ -1,8 +1,15 @@
 version="0.1"
 tags={
-	"Gameplay"
 	"Historical"
+	"Gameplay"
+	"Graphics"
 	"Military"
+	"Utilities"
+	"National Focuses"
+	"Events"
+	"Balance"
+	"Fixes"
 }
-name="PMMM - LTV"
-supported_version="1.16.4"
+name="PMMM"
+supported_version="1.16.0"
+remote_file_id="3439068425"
