@@ -264,7 +264,31 @@ PMMM_FRA = {
 
 
 
+		PMMM_FRA_add_legitimacy = {
+			activation = {
+				has_war_with = GER
+			}
+			available = {
+				always = no
+			}
+			cancel_trigger = {
+				has_global_flag = PMMM_FRA_CAP
+			}
+			icon = mission_icon     # For GFX_decision_mission_icon
+			is_good = yes
 
+			days_mission_timeout = 5
+			selectable_mission = no
+			complete_effect = {
+
+			}
+			timeout_effect = {
+				add_to_variable = {
+					var = FRA_PMMM_Legit
+					value = 1
+				}
+			}
+		}
 
 
 
@@ -300,6 +324,7 @@ PMMM_FRA = {
 			days_mission_timeout = 500
 			selectable_mission = no
 			complete_effect = {
+				set_global_flag = PMMM_FRA_CAP
 				FRA = { 
 					set_cosmetic_tag = FRA_FREE 
 					add_ideas = FRA_defeatism
@@ -551,6 +576,7 @@ PMMM_FRA = {
 
 
 			timeout_effect = {
+				set_global_flag = PMMM_FRA_CAP
 				FRA = { 
 					set_cosmetic_tag = FRA_FREE 
 					add_ideas = FRA_defeatism

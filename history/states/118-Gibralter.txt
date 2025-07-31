@@ -1,10 +1,6 @@
-state=
-{
+state={
 	id=118
 	name="STATE_118"
-	manpower=21372
-	
-	state_category = enclave
 	history={
 		owner = ENG
     add_core_of = NIX
@@ -21,8 +17,10 @@ state=
 		add_claim_by = SPR
 	}
 	provinces={
-		4135
+		4135 13228 
 	}
-
-	local_supplies=0.0 
+	manpower=21372
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
 }

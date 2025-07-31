@@ -1,8 +1,8 @@
 ﻿l_english:
  PMMM_RAJ_nosplit:0 "RPMMM Note: India will not split appart once Independence is gained !!\n\n"
 player_training:0 "Peace Time Training"
-player_training_tt:0 "\nRRemoved when Germany completes Danzig or War!"
-
+player_training_tt:0 "\nRRemoved when your Country enters War !!"
+neutral_nation:0 "Neutral Nation"
 
 PMMM_FRA:0 "French Legitimacy"
 PMMM_FRA_desc:0 "Current Legitimacy: [?FRA_PMMM_Legit]"

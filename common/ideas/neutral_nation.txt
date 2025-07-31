@@ -14,7 +14,7 @@ ideas = {
 			
 			modifier = {
 				training_time_factor = -0.70
-				experience_gain_army_unit_factor = 0.5
+				#experience_gain_army_unit_factor = 0.5
 				army_fuel_consumption_factor = -1
 				minimum_training_level = -0.3 
 				custom_modifier_tooltip = player_training_tt
