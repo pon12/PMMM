@@ -3887,7 +3887,8 @@
 			factor = 1
 		}
 		available = {
-			has_country_leader = { ruling_only = yes character = FRA_charles_de_gaulle}
+			#has_country_leader = { ruling_only = yes character = FRA_charles_de_gaulle}
+			has_global_flag = PMMM_FRA_CAP
 		}
 		
 		bypass = {

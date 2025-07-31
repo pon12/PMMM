@@ -6,3 +6,5 @@ neutral_nation:0 "Neutral Nation"
 
 PMMM_FRA:0 "French Legitimacy"
 PMMM_FRA_desc:0 "Current Legitimacy: [?FRA_PMMM_Legit]"
+FRA_PMMM_ADD_1_LEGIT_TT:0 "Add &G1&! &YLegitimacy&!"
+FRA_PMMM_ADD_5_LEGIT_TT:0 "Add &G5&! &YLegitimacy&!"
