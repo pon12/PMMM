@@ -1,7 +1,7 @@
 state={
 	id=489
 	name="STATE_489" # Zulia
-manpower = 0
+manpower = 1
 	state_category = town
 	resources={
 		oil=35 # was: 126

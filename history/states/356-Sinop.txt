@@ -1,7 +1,7 @@
 state={
 	id=356
 	name="STATE_356" # Kastamonu
-manpower = 0
+manpower = 1
 	state_category = rural
 	history={
 		owner = NIX

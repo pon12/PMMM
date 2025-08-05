@@ -6922,21 +6922,8 @@ focus_tree = {
 		icon = GFX_focus_SOV_the_path_of_marxism_leninism
 		x = 16
 		y = 0
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = SOV_beaten_but_not_defeated
-			}
-		}
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
-
-		mutually_exclusive = { focus = SOV_beaten_but_not_defeated }
 
 		allow_branch = {
 			if = {
@@ -6983,36 +6970,7 @@ focus_tree = {
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
 
-		mutually_exclusive = { focus = SOV_the_right_opposition focus = SOV_the_left_opposition }
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					AND = {
-						has_completed_focus = SOV_the_left_opposition
-						has_completed_focus = SOV_left_opposition_coup
-					}
-					AND = {
-						has_completed_focus = SOV_the_right_opposition
-						has_completed_focus = SOV_coup_detat
-					}
-					AND = {
-						has_completed_focus = SOV_beaten_but_not_defeated
-						has_completed_focus = SOV_the_hands_do
-					}
-				}
-			}
-		}
-
-		available = {
-
-		}
+		available = {}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA FOCUS_FILTER_STABILITY}
 
@@ -8417,18 +8375,6 @@ focus_tree = {
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
-
 		available = {
 
 		}
@@ -8801,18 +8747,6 @@ focus_tree = {
 		y = 0
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
-			}
-		}
 
 		available = {
 

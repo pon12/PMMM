@@ -13,9 +13,8 @@ focus_tree = {
         factor = 0
         
         modifier = {
-            add = 10
+            add = 20
             tag = RAJ
-            has_dlc = "Graveyard of Empires"
         }
     }
     default = no
@@ -93,7 +92,6 @@ focus_tree = {
         id = RAJ_provincial_autonomy
         icon = GFX_focus_RAJ_provincial_autonomy
         #prerequisite = { focus = }
-        mutually_exclusive = { focus = RAJ_great_depression_price_controls }
         x = -22
         y = 0
         relative_position_id = RAJ_indianize_the_army 
@@ -110,12 +108,6 @@ focus_tree = {
         
         bypass = {
             is_subject = no
-        }
-
-        allow_branch = {
-            NOT = {
-                has_completed_focus = RAJ_great_depression_price_controls
-            }
         }
 
         cancel_if_invalid = yes
@@ -572,7 +564,6 @@ focus_tree = {
 
         allow_branch = {
             NOT = { has_completed_focus = RAJ_league_against_gandhism }
-            NOT = { has_completed_focus = RAJ_great_depression_price_controls }
         }
 
         cancel_if_invalid = yes
@@ -2652,7 +2643,7 @@ focus_tree = {
         x = -10
         y = 1
         relative_position_id = RAJ_tryst_with_destiny
-        mutually_exclusive = { focus = RAJ_sideline_the_conflict focus = RAJ_pledge_for_the_allies }
+        mutually_exclusive = { focus = RAJ_pledge_for_the_allies }
         cost = 10
 
         ai_will_do = {
@@ -2723,46 +2714,6 @@ focus_tree = {
         }
     }
 
-
-
-   
-
-#    focus = {
-#        id = unhide_gandhi_death
-#       # icon = GFX_goal_generic_neutrality_focus
-#        prerequisite = {  }
-#        x = 7
-#        y = -1
-#        relative_position_id = RAJ_sideline_the_conflict
-#        cost = 0
-#
-#        ai_will_do = {
-#            factor = 1
-#        }
-#
-#        available = {
-#        }
-#        
-#        bypass = {
-#
-#        }
-#
-#        cancel_if_invalid = yes
-#        continue_if_invalid = no
-#        available_if_capitulated = no
-#
-#        search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
-#
-#        complete_tooltip = {
-#
-#        }
-#
-#        completion_reward = {
-#            set_country_flag = gandhi_survives_assasination_attempt
-#            mark_focus_tree_layout_dirty = yes
-#        }
-#    }
-#
     focus = {
         id = RAJ_pledge_for_the_allies
         icon = GFX_focus_eng_the_sun_never_sets
@@ -2770,7 +2721,7 @@ focus_tree = {
         x = 0
         y = 1
         relative_position_id = RAJ_tryst_with_destiny
-        mutually_exclusive = { focus = RAJ_i_am_death focus = RAJ_sideline_the_conflict }
+        mutually_exclusive = { focus = RAJ_i_am_death }
         cost = 1
 
         ai_will_do = {
@@ -2848,49 +2799,10 @@ focus_tree = {
         }
     }
 
-#    focus = {
-#        id = RAJ_ban_untouchability_once_and_for_all
-#        #icon = GFX_
-#        prerequisite = { focus = RAJ_sideline_the_conflict focus = RAJ_pledge_for_the_allies }
-#        x = 1
-#        y = 1
-#        relative_position_id = RAJ_sideline_the_conflict
-#        
-#        cost = 10
-#
-#        ai_will_do = {
-#            factor = 1
-#        }
-#
-#        available = {
-#
-#        }
-#        
-#        bypass = {
-#
-#        }
-#
-#        cancel_if_invalid = yes
-#        continue_if_invalid = no
-#        available_if_capitulated = no
-#
-#        complete_tooltip = {
-#
-#        }
-#
-#        completion_reward = {
-#            add_stability = 0.1
-#            add_popularity = {
-#                ideology = democratic
-#                popularity = 0.1
-#            }
-#        }
-#    }
-
     focus = {
         id = RAJ_preamble_to_the_constitution_of_india
         icon = GFX_focus_generic_the_giant_wakes
-        prerequisite = { focus = RAJ_sideline_the_conflict focus = RAJ_pledge_for_the_allies focus = RAJ_i_am_death }
+        prerequisite = { focus = RAJ_pledge_for_the_allies focus = RAJ_i_am_death }
         x = 0
         y = 1 
         relative_position_id = RAJ_pledge_for_the_allies

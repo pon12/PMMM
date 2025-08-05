@@ -1,7 +1,7 @@
 state={
 	id=352
 	name="STATE_352" # Van
-manpower = 0
+manpower = 1
 	state_category = rural
 	history={
 		owner = NIX

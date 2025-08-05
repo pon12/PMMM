@@ -2121,7 +2121,7 @@ focus_tree = {
 	focus = {
 		id = BUL_condemn_macedonian_organizations
 
-		prerequisite = { focus = BUL_power_to_the_tsar focus = BUL_oppose_the_royal_dictatorship }
+		prerequisite = { focus = BUL_power_to_the_tsar }
 		icon = GFX_focus_BUL_condemn_macedonian_organizations
 		relative_position_id = BUL_power_to_the_tsar
 		x = -3
@@ -2173,7 +2173,7 @@ focus_tree = {
 	focus = {
 		id = BUL_support_macedonian_organizations
 
-		prerequisite = { focus = BUL_power_to_the_tsar focus = BUL_oppose_the_royal_dictatorship }
+		prerequisite = { focus = BUL_power_to_the_tsar }
 		icon = GFX_focus_BUL_support_macedonian_organizations
 		relative_position_id = BUL_condemn_macedonian_organizations
 		x = 2
@@ -2255,7 +2255,7 @@ focus_tree = {
 	focus = {
 		id = BUL_dissolve_the_military_union
 
-		prerequisite = { focus = BUL_power_to_the_tsar focus = BUL_oppose_the_royal_dictatorship }
+		prerequisite = { focus = BUL_power_to_the_tsar }
 		icon = GFX_focus_BUL_destroy_the_zveno
 		relative_position_id = BUL_condemn_macedonian_organizations
 		x = 4
@@ -2286,7 +2286,7 @@ focus_tree = {
 	focus = {
 		id = BUL_cooperate_with_the_zveno
 
-		prerequisite = { focus = BUL_power_to_the_tsar focus = BUL_oppose_the_royal_dictatorship }
+		prerequisite = { focus = BUL_power_to_the_tsar }
 		icon = GFX_focus_BUL_cooperate_with_the_zveno
 		relative_position_id = BUL_condemn_macedonian_organizations
 		x = 6
@@ -2350,7 +2350,7 @@ focus_tree = {
 	focus = {
 		id = BUL_restrained_paramilitary_organizations
 
-		prerequisite = { focus = BUL_the_tsars_regime focus = BUL_democratic_principles }
+		prerequisite = { focus = BUL_the_tsars_regime }
 		icon = GFX_goal_demand_sudetenland
 		relative_position_id = BUL_the_tsars_regime
 		x = -1
@@ -2386,7 +2386,7 @@ focus_tree = {
 	focus = {
 		id = BUL_ban_far_right_organizations
 
-		prerequisite = { focus = BUL_the_tsars_regime focus = BUL_democratic_principles }
+		prerequisite = { focus = BUL_the_tsars_regime }
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		relative_position_id = BUL_restrained_paramilitary_organizations
 		x = -2
@@ -2682,7 +2682,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		cost = 10
-		mutually_exclusive = { focus = BUL_plot_against_boris }
 
 		available = {
 			neutrality > 0.7
@@ -2787,7 +2786,7 @@ focus_tree = {
 	focus = {
 		id = BUL_liberalization_of_trade_policies
 
-		prerequisite = { focus = BUL_illusions_of_a_non_partisan_system focus = BUL_petorka }
+		prerequisite = { focus = BUL_illusions_of_a_non_partisan_system }
 
 		icon = GFX_goal_generic_trade
 		relative_position_id = BUL_illusions_of_a_non_partisan_system
@@ -3838,7 +3837,7 @@ focus_tree = {
 	focus = {
 		id = BUL_bulgarian_administration_of_the_balkans
 
-		prerequisite = { focus = BUL_peaceful_development focus = BUL_nationalist_propaganda }
+		prerequisite = { focus = BUL_peaceful_development }
 
 		icon = GFX_focus_BUL_bulgarian_administration_of_the_balkans
 		relative_position_id = BUL_join_the_tripartite_pact

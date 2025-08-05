@@ -17,8 +17,4 @@ focus_tree = {
 		focus = industrial_effort
 	}
 
-	#shared_focus = HABSBURG_part_of_something_bigger
-
-		
-
 }

@@ -9614,8 +9614,7 @@ focus_tree = {
 	focus = {
 		id = ITA_towards_a_greater_italy
 		icon = GFX_focus_ITA_greater_italy
-		prerequisite = { focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty focus = ITA_setting_course }
-		mutually_exclusive = { focus = ITA_mare_nostrum_bba }
+		prerequisite = { focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
 
 		x = 0
 		y = 1
@@ -10622,7 +10621,7 @@ focus_tree = {
 		id = ITA_italo_balbo_focus
 		icon = GFX_focus_ITA_italo_balbo
 		prerequisite = { focus = ITA_depose_mussolini }
-		mutually_exclusive = { focus = ITA_dino_grandi_focus focus = ITA_monarchia_d_italia }
+		mutually_exclusive = { focus = ITA_dino_grandi_focus }
 		relative_position_id = ITA_depose_mussolini
 		x = -5
 		y = 1
@@ -10680,7 +10679,7 @@ focus_tree = {
 		id = ITA_dino_grandi_focus
 		icon = GFX_focus_ITA_dino_grandi
 		prerequisite = { focus = ITA_depose_mussolini }
-		mutually_exclusive = { focus = ITA_italo_balbo_focus focus = ITA_monarchia_d_italia }
+		mutually_exclusive = { focus = ITA_italo_balbo_focus }
 		relative_position_id = ITA_depose_mussolini
 		x = 5
 		y = 1
@@ -11710,7 +11709,7 @@ focus_tree = {
 	focus = {
 		id = ITA_seek_british_military_cooperation
 		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = ITA_dino_grandi_focus focus = ITA_monarchia_d_italia }
+		prerequisite = { focus = ITA_dino_grandi_focus }
 		mutually_exclusive = { focus = ITA_invite_france_to_military_partnership }
 		relative_position_id = ITA_dino_grandi_focus
 		x = 2
@@ -11788,7 +11787,7 @@ focus_tree = {
 	focus = {
 		id = ITA_invite_france_to_military_partnership
 		icon = GFX_goal_tfv_generic_tech_sharing
-		prerequisite = { focus = ITA_dino_grandi_focus focus = ITA_monarchia_d_italia }
+		prerequisite = { focus = ITA_dino_grandi_focus }
 		mutually_exclusive = { focus = ITA_seek_british_military_cooperation }
 		relative_position_id = ITA_seek_british_military_cooperation
 		x = 2
@@ -12801,7 +12800,6 @@ focus_tree = {
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = ITA_pact_of_steel }
 		prerequisite = { focus = ITA_italian_irredentism }
-		mutually_exclusive = { focus = ITA_war_with_france }
 		x = 0
 		y = 2
 		relative_position_id = ITA_pact_of_steel
@@ -12861,7 +12859,7 @@ focus_tree = {
 	focus = {
 		id = ITA_befriend_japan
 		icon = GFX_focus_chi_collaboration_with_the_japanese
-		prerequisite = { focus = ITA_pact_of_steel focus = ITA_italy_first }
+		prerequisite = { focus = ITA_pact_of_steel }
 
 		x = 1
 		y = 1
@@ -12897,7 +12895,7 @@ focus_tree = {
 	focus = {
 		id = ITA_italian_irredentism
 		icon = GFX_focus_ITA_italian_irredentism
-		prerequisite = { focus = ITA_pact_of_steel focus = ITA_italy_first }
+		prerequisite = { focus = ITA_pact_of_steel }
 
 		x = 3
 		y = 1
@@ -13008,7 +13006,6 @@ focus_tree = {
 		id = ITA_war_with_greece
 		icon = GFX_focus_generic_attack_greece
 		prerequisite = { focus = ITA_italian_irredentism }
-		mutually_exclusive = { focus = ITA_befriend_greece }
 		x = 0
 		y = 1
 		relative_position_id = ITA_italian_irredentism
@@ -13246,45 +13243,8 @@ focus_tree = {
 			effect_tooltip = {
 				set_country_flag = ITA_rds_cw_flag
 				#Leader back
+
 				if = {
-					limit = {
-						has_completed_focus = ITA_monarchia_d_italia
-					}
-					if = { #Safety check for ideology
-						limit = {
-							NOT = { has_government = neutrality }
-						}
-						set_politics = {
-							ruling_party = neutrality
-							elections_allowed = no
-						}
-					}
-					if = {
-						limit = {
-							has_character = ITA_vittorio_emanuele_iii
-							NOT = { has_country_leader = { character = ITA_vittorio_emanuele_iii ruling_only = yes } }
-							NOT = { has_country_flag = ITA_vittorio_emmanuele_dead_flag }
-						}
-						promote_character = ITA_vittorio_emanuele_iii
-					}
-					else_if = {
-						limit = {
-							has_character = ITA_prince_umberto
-							NOT = { has_country_leader = { character = ITA_prince_umberto ruling_only = yes } }
-							has_country_flag = ITA_vittorio_emmanuele_dead_flag
-						}
-						if = {
-							limit = {
-								NOT = { ITA_prince_umberto = { has_ideology_group = neutrality } }#Checking for the country_leader role
-							}
-							ITA_promote_umberto_to_country_leader = yes
-						}
-						else = {
-							promote_character = ITA_prince_umberto
-						}
-					}
-				}
-				else_if = {
 					limit = {
 						has_completed_focus = ITA_unite_the_opposition
 					}
@@ -13998,44 +13958,6 @@ focus_tree = {
 				set_country_flag = ITA_rsi_cw_flag
 				#Leader back
 				if = {
-					limit = {
-						has_completed_focus = ITA_monarchia_d_italia
-					}
-					if = { #Safety check for ideology
-						limit = {
-							NOT = { has_government = neutrality }
-						}
-						set_politics = {
-							ruling_party = neutrality
-							elections_allowed = no
-						}
-					}
-					if = {
-						limit = {
-							has_character = ITA_vittorio_emanuele_iii
-							NOT = { has_country_leader = { character = ITA_vittorio_emanuele_iii ruling_only = yes } }
-							NOT = { has_country_flag = ITA_vittorio_emmanuele_dead_flag }
-						}
-						promote_character = ITA_vittorio_emanuele_iii
-					}
-					else_if = {
-						limit = {
-							has_character = ITA_prince_umberto
-							NOT = { has_country_leader = { character = ITA_prince_umberto ruling_only = yes } }
-							has_country_flag = ITA_vittorio_emmanuele_dead_flag
-						}
-						if = {
-							limit = {
-								NOT = { ITA_prince_umberto = { has_ideology_group = neutrality } }#Checking for the country_leader role
-							}
-							ITA_promote_umberto_to_country_leader = yes
-						}
-						else = {
-							promote_character = ITA_prince_umberto
-						}
-					}
-				}
-				else_if = {
 					limit = {
 						has_completed_focus = ITA_dino_grandi_focus
 						has_character = ITA_dino_grandi

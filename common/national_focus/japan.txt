@@ -19,10 +19,8 @@
 	focus = {
 		id = JAP_purge_the_kodoha_faction
 		icon = GFX_goal_generic_major_war
-		mutually_exclusive = { focus = JAP_the_unthinkable_option focus = JAP_support_the_kodoha_faction focus = JAP_strengthen_civilian_government }
 		x = 8
 		y = 0
-		relative_position_id = JAP_the_unthinkable_option
 		offset = {
 			x = -8
 			y = 0
@@ -44,24 +42,6 @@
 
 		ai_will_do = {
 			factor = 4
-		}
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = JAP_the_unthinkable_option
-						has_completed_focus = JAP_support_the_kodoha_faction
-						has_completed_focus = JAP_strengthen_civilian_government
-					}
-				}
-			}
 		}
 
 		available = {
@@ -460,7 +440,6 @@
 		id = JAP_bypass_the_philippines
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = JAP_non_aggression_pact_with_the_soviet_union }
-		mutually_exclusive = { focus = JAP_secure_the_philippines }
 		x = 0
 		y = 1
 		relative_position_id = JAP_non_aggression_pact_with_the_soviet_union
@@ -499,7 +478,7 @@
 	focus = {
 		id = JAP_strike_on_the_southern_resource_area
 		icon = GFX_focus_jap_strike_south
-		prerequisite = { focus = JAP_secure_the_philippines focus = JAP_bypass_the_philippines }
+		prerequisite = { focus = JAP_bypass_the_philippines }
 		x = 0
 		y = 1
 		relative_position_id = JAP_bypass_the_philippines

@@ -556,11 +556,8 @@ available = {
 		icon = GFX_focus_RAJ_special_economic_zones
 		x = 4
 		y = 0
-		relative_position_id = CAN_rowell_sirois_commission
 
 		cost = 2
-
-
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no

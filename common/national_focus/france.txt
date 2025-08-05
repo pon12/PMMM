@@ -2385,7 +2385,6 @@
 		prerequisite = {
 			focus = FRA_review_foreign_policy
 		}
-		mutually_exclusive = { focus = FRA_confirm_eastern_commitments }
 		relative_position_id = FRA_review_foreign_policy
 		cost = 10
 
@@ -2526,7 +2525,6 @@
 			}
 		}
 	 	prerequisite = { focus = FRA_buy_time }
-	 	mutually_exclusive = { focus = FRA_france_leads }
 		x = 1
 		y = 1
 		relative_position_id = FRA_buy_time
@@ -3868,10 +3866,6 @@
 
 
 
-
-
-
-
 	focus = {
 		id = FRA_appeal_to_the_french_nation
 		icon = GFX_goal_generic_propaganda
@@ -3887,7 +3881,6 @@
 			factor = 1
 		}
 		available = {
-			#has_country_leader = { ruling_only = yes character = FRA_charles_de_gaulle}
 			has_global_flag = PMMM_FRA_CAP
 		}
 		

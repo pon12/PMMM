@@ -38,23 +38,6 @@ focus_tree = {
 	}
 	
 	#Focus Path shortcuts	
-	shortcut = {
-		name = GER_oppose_hitler_shortcut
-		target = GER_oppose_hitler_ww 
-		scroll_wheel_factor = 0.485
-		trigger = {
-			has_dlc = "Gotterdammerung"
-		}
-	}
-
-	shortcut = {
-		name = GER_oppose_hitler_shortcut
-		target = GER_oppose_hitler
-		scroll_wheel_factor = 0.55
-		trigger = {
-			NOT = { has_dlc = "Gotterdammerung" }
-		}
-	}
 
 	shortcut = {
 		name = GER_historical_path_shortcut
@@ -8003,25 +7986,6 @@ focus_tree = {
 		icon = GFX_focus_GER_remilitarize_the_rhineland
 		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
 
-		mutually_exclusive = { focus = GER_oppose_hitler_ww focus = GER_oppose_hitler }
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_oppose_hitler_ww
-						has_completed_focus = GER_oppose_hitler
-					}
-				}
-			}
-		}
-
 		x = 33
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
@@ -8309,24 +8273,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_war_preparations
 		cost = 10
-
-		allow_branch = {
-			
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
-					}
-				}
-			}
-		}
 
 		available = {
 		}
@@ -9242,8 +9188,6 @@ focus_tree = {
 
 		prerequisite = { focus = GER_anschluss }
 
-		mutually_exclusive = { focus = GER_befriend_czechoslovakia }
-
 		x = -2
 		y = 1
 		relative_position_id = GER_anschluss
@@ -9783,8 +9727,7 @@ focus_tree = {
 		icon = GFX_focus_befriend_italy
 		alternate_icon = GFX_focus_GER_befriend_italy
 
-		prerequisite = { focus = GER_fate_of_czechoslovakia focus = GER_integrate_czechoslovakia }
-		mutually_exclusive = { focus = GER_invade_italy }
+		prerequisite = { focus = GER_fate_of_czechoslovakia }
 		x = -2
 		y = 1
 		relative_position_id = GER_fate_of_czechoslovakia
@@ -9858,8 +9801,7 @@ focus_tree = {
 	focus = {
 		id = GER_alliance_with_spain
 		icon = GFX_focus_intervention_spain_nationalists
-		prerequisite = { focus = GER_form_rome_berlin_axis focus = GER_invade_italy }
-		mutually_exclusive = { focus = GER_operation_felix }
+		prerequisite = { focus = GER_form_rome_berlin_axis }
 		x = 0
 		y = 1
 		relative_position_id = GER_form_rome_berlin_axis
@@ -10052,7 +9994,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_danzig_or_war_historical
 
 		prerequisite = { focus = GER_reassert_eastern_claims }
-		mutually_exclusive = { focus = GER_danzig_for_slovakia }
 		x = 0
 		y = 3
 		relative_position_id = GER_reassert_eastern_claims
@@ -10226,7 +10167,7 @@ focus_tree = {
 	focus = {
 		id = GER_subjugate_romanian_economy
 		icon = GFX_focus_GER_subjugate_romanian_economy
-		prerequisite = { focus = GER_danzig_for_slovakia focus = GER_danzig_or_war }
+		prerequisite = { focus = GER_danzig_or_war }
 
 		x = -3
 		y = 1
@@ -10287,8 +10228,7 @@ focus_tree = {
 		icon = GFX_focus_GER_around_maginot
 		alternate_icon = GFX_focus_GER_around_maginot_historical
 
-		prerequisite = { focus = GER_danzig_for_slovakia focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_influence_the_benelux }
+		prerequisite = { focus = GER_danzig_or_war }
 		x = -1
 		y = 1
 		relative_position_id = GER_danzig_or_war
@@ -10446,7 +10386,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_operation_wesserubung_historical
 
 		prerequisite = { focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_utilize_the_nordliche_gesellschaft }
 		x = 1
 		y = 1
 		relative_position_id = GER_danzig_or_war
@@ -10812,7 +10751,6 @@ focus_tree = {
 		id = GER_the_swiss_gold
 		icon = GFX_focus_GER_the_swiss_gold
 		prerequisite = { focus = GER_war_with_france }
-		mutually_exclusive = { focus = GER_operation_tannenbaum }
 		x = 3
 		y = 1
 		relative_position_id = GER_war_with_france
@@ -11549,7 +11487,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_war_with_the_ussr
 
 		prerequisite = { focus = GER_anti_comintern_pact }
-		mutually_exclusive = { focus = GER_alliance_with_the_ussr }
 		x = 0
 		y = 1
 		relative_position_id = GER_anti_comintern_pact
@@ -11682,7 +11619,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
 
 		prerequisite = { focus = GER_reassert_eastern_claims }
-		mutually_exclusive = { focus = GER_anti_soviet_pact }
 		x = 0
 		y = 1
 		relative_position_id = GER_reassert_eastern_claims
@@ -12054,7 +11990,7 @@ focus_tree = {
 	focus = {
 		id = GER_reclaim_former_african_colonies
 		icon = GFX_focus_GER_reclaim_former_african_colonies
-		prerequisite = { focus = GER_befriend_china focus = GER_befriend_japan }
+		prerequisite = { focus = GER_befriend_japan }
 
 		x = 0
 		y = 1

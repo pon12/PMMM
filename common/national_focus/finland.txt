@@ -35,21 +35,7 @@ focus_tree = {
 		y = 0
 	}
 
-	continuous_focus_position = { x = 45 y = 1500 }
-
-
-
-
- ######   #######   ######  ####    ###    ##       ####  ######  ######## 
-##    ## ##     ## ##    ##  ##    ## ##   ##        ##  ##    ##    ##    
-##       ##     ## ##        ##   ##   ##  ##        ##  ##          ##    
- ######  ##     ## ##        ##  ##     ## ##        ##   ######     ##    
-      ## ##     ## ##        ##  ######### ##        ##        ##    ##    
-##    ## ##     ## ##    ##  ##  ##     ## ##        ##  ##    ##    ##    
- ######   #######   ######  #### ##     ## ######## ####  ######     ##    
-
-
-
+	continuous_focus_position = { x = 300 y = 1500 }
 
 
 ##     ## ####  ######  ########  #######  ########  ####  ######     ###    ##       
@@ -74,17 +60,15 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = { has_completed_focus = FIN_suomalainen_sosialismi }
 				NOT = { has_completed_focus = FIN_right_wing_policies }
 			}
 		}
 
-		x = 16
+		x = 10
 		y = 0
-		relative_position_id = FIN_suomalainen_sosialismi
 
 		offset = {
-			x = -16
+			x = 0
 			y = 0
 			trigger = {
 				OR = {
@@ -100,7 +84,7 @@ focus_tree = {
 			}
 		}
 
-		mutually_exclusive = { focus = FIN_right_wing_policies focus = FIN_suomalainen_sosialismi }
+		mutually_exclusive = { focus = FIN_right_wing_policies }
 		
 		cost = 5
 
@@ -267,7 +251,7 @@ focus_tree = {
 	focus = {
 		id = FIN_align_the_agrarian_league
 		icon = GFX_focus_generic_workers
-		prerequisite = { focus = FIN_political_unity focus = FIN_social_democracy }
+		prerequisite = { focus = FIN_political_unity }
 
 		x = -3
 		y = 1
@@ -296,7 +280,7 @@ focus_tree = {
 	focus = {
 		id = FIN_the_finnish_swedish_peoples_party
 		icon = GFX_focus_generic_industrialists
-		prerequisite = { focus = FIN_social_democracy focus = FIN_political_unity }
+		prerequisite = { focus = FIN_political_unity }
 
 		x = 2
 		y = 0
@@ -857,7 +841,6 @@ focus_tree = {
 		id = FIN_the_lone_wolf
 		icon = GFX_focus_FIN_the_lone_wolf
 		prerequisite = { focus = FIN_moderate_politics }
-		mutually_exclusive = { focus = FIN_northern_defense_front focus = FIN_join_the_allies }
 		x = 0
 		y = 1
 		relative_position_id = FIN_moderate_politics
@@ -1549,7 +1532,6 @@ focus_tree = {
 					}
 				}
 				NOT = { has_completed_focus = FIN_finnish_neutrality }
-				NOT = { has_completed_focus = FIN_suomalainen_sosialismi }
 			}
 		}
 
@@ -1569,7 +1551,7 @@ focus_tree = {
 			}
 		}
 		
-		mutually_exclusive = { focus = FIN_finnish_neutrality focus = FIN_suomalainen_sosialismi }
+		mutually_exclusive = { focus = FIN_finnish_neutrality }
 		
 		cost = 5
 
@@ -1983,7 +1965,6 @@ focus_tree = {
 		id = FIN_join_axis
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = FIN_a_fascist_regime }
-		mutually_exclusive = { focus = FIN_finnish_supremacy_in_the_north }
 		x = -2
 		y = 1
 		relative_position_id = FIN_a_fascist_regime
@@ -2529,7 +2510,7 @@ focus_tree = {
 	focus = {
 		id = FIN_advanced_jaeger_training_program
 		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = FIN_military_research focus = FIN_finnish_legion_of_honor }
+		prerequisite = { focus = FIN_military_research }
 
 		x = 1
 		y = 1
@@ -3073,18 +3054,6 @@ focus_tree = {
 						has_completed_focus = FIN_finnish_neutrality
 					}
 				}
-			}
-		}
-
-		offset = {
-			x = -27
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FIN_suomalainen_sosialismi
 			}
 		}
 
