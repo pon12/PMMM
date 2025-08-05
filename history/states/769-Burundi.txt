@@ -8,19 +8,8 @@ state = {
 	history = {
 
 		owner = BEL
-    add_core_of = NIX
-    add_core_of = NIX
-
-		IF = {
-			limit = {
-				has_dlc = "Gotterdammerung"
-			}
-			transfer_state_to = COG
-			add_dynamic_modifier = {
-				modifier = COG_burundian_separatism_modifier
-			}	
-		}
-		
+		add_core_of = NIX
+		add_core_of = BEL
 
 		victory_points = {
 			2220 1
