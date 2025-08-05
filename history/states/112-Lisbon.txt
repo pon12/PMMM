@@ -6,9 +6,9 @@ state={
 	}
 
 	history={
-		owner = NIX
-    add_core_of = NIX
-    add_core_of = NIX
+		owner = SPR
+		add_core_of = SPR
+		add_core_of = NIX
 		victory_points = {
 			11805 20 
 		}

@@ -5,9 +5,9 @@ state={
 		chromium=20.000 #added due to portugal setup
 	}
 	history={
-		owner = NIX
-    add_core_of = NIX
-    add_core_of = NIX
+		owner = SPR
+		add_core_of = SPR
+		add_core_of = NIX
 		victory_points = {
 			9869 1 
 		}
