@@ -7,6 +7,7 @@ state={
 		owner = LIT
     add_core_of = NIX
     add_core_of = LIT
+    add_core_of = SOV
 		victory_points = {
 			11312 1 #Marijampole
 		}
@@ -17,7 +18,6 @@ state={
 			air_base = 4
 
 		}
-		add_core_of = LIT
 
 	}
 

@@ -7,9 +7,10 @@ state={
 	}
 
 	history={
-		owner = EST
+		owner = LIT
     add_core_of = NIX
-    add_core_of = EST
+    add_core_of = LIT
+    add_core_of = SOV
 		victory_points = {
 			3174 1 #Voru
 		}
@@ -20,7 +21,6 @@ state={
 			air_base = 2
 
 		}
-		add_core_of = EST
 
 	}
 

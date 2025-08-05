@@ -4,9 +4,10 @@ state={
 	name="STATE_810"
 
 	history={
-		owner = LAT
+		owner = LIT
     add_core_of = NIX
-    add_core_of = LAT
+    add_core_of = LIT
+    add_core_of = SOV
 		victory_points = {
 			6222 3 #Jelgava
 		}
@@ -24,7 +25,6 @@ state={
 			}
 
 		}
-		add_core_of = LAT
 
 	}
 

@@ -4,9 +4,10 @@ state={
 	name="STATE_809"
 
 	history={
-		owner = LAT
+		owner = LIT
     add_core_of = NIX
-    add_core_of = LAT
+    add_core_of = LIT
+    add_core_of = SOV
 		victory_points = {
 			310 3 #Daugavpils
 		}
@@ -18,7 +19,6 @@ state={
 			industrial_complex = 1
 			arms_factory = 1
 		}
-		add_core_of = LAT
 
 	}
 
