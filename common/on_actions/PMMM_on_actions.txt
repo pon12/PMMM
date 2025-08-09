@@ -32,7 +32,23 @@ effect = {
 every_country = {
 	limit = { NOT = {TAG = ETH} NOT = {TAG=AFA} NOT = {TAG=NIX}NOT = {TAG=CHI}}
 	add_ideas = player_training
+}
 
+if = {
+	limit = {
+		has_game_rule = {
+			rule = No_Asia_game_rule
+			option = "NO_ASIA_JA"
+		}
+	}
+	NIX = {annex_country = { target = USA transfer_troops = no }}
+	NIX = {annex_country = { target = MEX transfer_troops = no }}
+	NIX = {annex_country = { target = JAP transfer_troops = no }}
+	NIX = {annex_country = { target = MAN transfer_troops = no }}
+	NIX = {annex_country = { target = SIA transfer_troops = no }}
+	NIX = {annex_country = { target = CHI transfer_troops = no }}
+	NIX = {annex_country = { target = RAJ transfer_troops = no }}
+	NIX = {annex_country = { target = PHI transfer_troops = no }}
 }
 
 
