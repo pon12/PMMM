@@ -336,6 +336,9 @@ bookmarks = {
 			#		transfer_troops = no
 			#	}
 			#}
+			LIT = {
+				set_cosmetic_tag = LIT_united_baltic
+			}
 		}
 	}
 }

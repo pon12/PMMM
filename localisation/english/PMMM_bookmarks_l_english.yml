@@ -1,5 +1,5 @@
 ﻿l_english:
- NO_ASIA_NAME:0 "No Asia setting"
- NO_ASIA_DESC:0 "This setting disables the Asia continent and USA, removing all Asian countries and events related to Asia. Used for smaller lobbies."
+ NO_ASIA_NAME:0 "No Asia setting [WIP]"
+ NO_ASIA_DESC:0 "This setting disables the Asia continent and USA, removing all Asian countries and events related to Asia. Used for smaller lobbies. [Work in Progress]"
  STANDARD_NAME:0 "Standard setting"
  STANDARD_DESC:0 "Standard setting. Includes all countries and events."
