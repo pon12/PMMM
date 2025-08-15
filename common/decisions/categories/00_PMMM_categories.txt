@@ -7,8 +7,10 @@ JFU_SAF = {
 
 PMMM_FRA = {
 	icon = generic_political_actions
+	priority = 102
 	visible = {
 	}	
+	visible_when_empty = yes
 }
 
 # SOV_winter_war_d = {

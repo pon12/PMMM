@@ -3947,6 +3947,10 @@
 					tooltip = FRA_the_maquis
 				}
 			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
 		}
 	}
 	focus = {
@@ -3980,6 +3984,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = FRA_connections_to_trade_unions
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 		}
 	}
 	focus = {
@@ -4022,6 +4030,10 @@
 				}
 			}
 			add_ideas = FRA_communist_cooperation_2
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 		}
 	}
 	focus = {
@@ -4055,6 +4067,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_ideas = FRA_industrialist_connections
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 		}
 	}
 	focus = {
@@ -4091,13 +4107,21 @@
 				remove_idea = FRA_industrialist_connections
 				add_idea = FRA_civil_and_military_organization
 			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
 		}
 	}
 
 	focus = {
 		id = FRA_appeal_to_the_french_nation
 		icon = GFX_goal_generic_propaganda
-		x = 10
+		x = 8
 		y = 0
 		relative_position_id = FRA_refus_absurde
 
@@ -4119,17 +4143,18 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			if = {
-				limit = { not = { has_dlc = "Man the Guns" } }
-				add_manpower = 10000
-			}
-			else = {
-				add_manpower = 10000
-				add_legitimacy = 15
-			}
+				add_political_power = 100
+				add_manpower = 50000
+				#add_legitimacy = 15
+				custom_effect_tooltip = FRA_PMMM_ADD_5_LEGIT_TT
+				add_to_variable = {
+					var = FRA_PMMM_Legit
+					value = 5
+				}
+			
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 5000
+				amount = 10000
 			}
 		}
 	}
@@ -4163,29 +4188,29 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			custom_effect_tooltip = FRA_appeal_to_overseas_territories_tt
+			
 			add_offsite_building = {
 				type = industrial_complex
 				level = 2
 			}
-			hidden_effect = {
-				country_event = lar_appeal_to_overseas_territories.1
-			}
+			add_ideas = PMMM_FRA_idea_easy_trade
+			
+			
 		}
 	}
 	focus = {
 		id = FRA_intervention_in_north_africa
 		icon = GFX_goal_generic_position_armies
-		x = -5
+		x = 2
 		y = 1
 		offset = {
 			x = 0
 			y = 0
 		}
 		prerequisite = { 
-			focus = FRA_appeal_to_overseas_territories
+			focus = FRA_form_the_national_committee
 		}
-		relative_position_id = FRA_appeal_to_overseas_territories
+		relative_position_id = FRA_form_the_national_committee
 		
 		cost = 10
 		ai_will_do = {
@@ -4228,9 +4253,7 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				FRA_controls_west_africa = yes
-			}
+			
 		}
 		
 		bypass = {
@@ -4241,9 +4264,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_west_africa }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_west_africa }
-			unlock_decision_tooltip = { decision = FRA_invasion_in_west_africa }
+				custom_effect_tooltip = PMMM_FRA_hinweis_auf_decision_1
 		}
 	}
 	focus = {
@@ -4283,47 +4304,11 @@
 			unlock_decision_tooltip = { decision = FRA_invasion_in_syria }
 		}
 	}
-	focus = {
-		id = FRA_intervention_in_indochina
-		icon = GFX_goal_generic_position_armies
-		x = 1
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = FRA_appeal_to_overseas_territories
-		}
-		relative_position_id = FRA_appeal_to_overseas_territories
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			NOT = {
-				FRA_controls_indochina = yes
-			}
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_indochina }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_indochina }
-			unlock_decision_tooltip = { decision = FRA_invasion_in_indochina }
-		}
-	}
+	
 	focus = {
 		id = FRA_intervention_in_central_africa
 		icon = GFX_goal_generic_position_armies
-		x = 3
+		x = 1
 		y = 1
 		offset = {
 			x = 0
@@ -4360,7 +4345,7 @@
 	focus = {
 		id = FRA_intervention_in_madagascar
 		icon = GFX_goal_generic_position_armies
-		x = 5
+		x = 3
 		y = 1
 		offset = {
 			x = 0
@@ -4415,8 +4400,7 @@
 		prerequisite = { 
 			focus = FRA_intervention_in_madagascar
 			focus = FRA_intervention_in_syria
-			focus = FRA_intervention_in_indochina
-			focus = FRA_intervention_in_north_africa
+			
 			focus = FRA_intervention_in_west_africa
 			focus = FRA_intervention_in_central_africa
 		}
@@ -4626,14 +4610,8 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			IF = {
-				limit = {
-					has_idea = FRA_defeatism
-				}
-				remove_ideas = { FRA_defeatism }
-			}
-			load_focus_tree = french_focus
-			#TODO_GABRIEL: Make scripted effect to give correct focuses depending on left/right
+			add_stability = 0.15
+			add_political_power = 100
 		}
 	}
 	focus = {

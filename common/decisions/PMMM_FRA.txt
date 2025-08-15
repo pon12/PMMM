@@ -1,268 +1,5 @@
 PMMM_FRA = {
 	
-	PMMM_FRA_surrender = { 
-		icon = eng_trade_unions_demand
-		fire_only_once = yes
-		allowed = { tag = FRA }	
-		available = { 
-			has_war = yes
-	}		
-		cost = 0
-		complete_effect = { 
-			FRA = { 
-				set_cosmetic_tag = FRA_FREE 
-				add_ideas = FRA_defeatism
-				remove_ideas = FRA_victors_of_wwi
-				remove_ideas = FRA_disjointed_government
-				remove_ideas = FRA_protected_by_the_maginot_line
-				
-			custom_effect_tooltip = france.20.a_tt
-			set_country_flag = france_de_gaulle
-			hidden_effect =  {
-				add_country_leader_role = {
-					character = FRA_charles_de_gaulle
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-						traits = {
-						}	
-					}
-					promote_leader = yes				
-				}		
-			}
-
-			}
-				
-			 
-				hidden_effect = {
-				GER = {
-					set_state_controller = 28
-					set_state_controller = 17
-					set_state_controller = 27
-					set_state_controller = 18
-					set_state_controller = 29
-					set_state_controller = 785
-					set_state_controller = 806
-					set_state_controller = 15
-					set_state_controller = 16
-					set_state_controller = 24
-					set_state_controller = 30
-					set_state_controller = 14
-					set_state_controller = 23
-					set_state_controller = 19	
-			}
-			 }
-
-			 custom_effect_tooltip = establishing_vichy_tt
-	
-			 GER_set_consumer_goods_war_reparations = yes
-	
-			 hidden_effect = {
-				create_dynamic_country = {
-					original_tag = FRA
-					save_event_target_as = vichy_france
-					set_country_flag = vichy_france
-					every_state = { #transfer French colonial empire
-						limit = {
-							is_controlled_by = FRA
-							is_owned_by = FRA
-							OR = {
-								is_on_continent = africa
-								
-							}
-
-						}
-						event_target:vichy_france = { transfer_state = PREV }
-					}
-					every_state = {
-						limit = { #set up Vichy continental holdings
-							OR = {
-								state = 735
-								state = 21
-								state = 851
-								state = 32
-								state = 20
-								state = 26
-								state = 22
-								state = 31
-								state = 25
-								state = 33
-								state = 1
-								state = 799
-								state = 677
-								state = 680
-								state = 553
-								state = 554
-								state = 671
-								state = 670
-								state = 286
-								state = 741
-								state = 728
-
-
-							}
-							CONTROLLER = { 
-								OR = {
-									original_tag = FRA
-									has_war_with = FRA
-								} 
-							} #failsafe for weird shit (tm)
-						}
-						add_core_of = PREV
-						event_target:vichy_france = { transfer_state = PREV }
-					}
-					every_state = { #set up cores for French cores
-						limit = {
-							is_core_of = FRA
-							NOT = {
-								is_controlled_by = event_target:vichy_france
-							}
-						}
-						add_core_of = PREV
-					}
-
-
-
-
-					
-					every_owned_state = {
-						limit = {
-							NOT = {
-								is_core_of = FRA
-							}
-						}
-						FRA = { add_state_claim = PREV } #Free France gets claims on all of Vichy, primarily so they can demand that shit back in a peacedeal
-					}
-					set_rule = { 
-						can_join_factions = no 
-						can_create_factions = no
-						can_not_declare_war = yes
-					}
-					set_capital = { state = 26 }
-					set_politics = {
-						ruling_party = fascism
-						elections_allowed = no
-					}
-					set_popularities = {
-						democratic = 22
-						fascism = 46
-						neutrality = 30
-						communism = 2
-					}
-					set_cosmetic_tag = FRA_VICHY
-					FRA = {
-						FRA_philippe_petain= {
-							set_nationality = event_target:vichy_france	
-						}
-					}
-					FRA_philippe_petain= {
-						add_country_leader_role = {
-							country_leader = {
-								expire = "1965.1.1"
-								ideology = fascism_ideology
-								traits = {
-									
-								}
-							}
-							promote_leader = yes
-						}
-					}
-					
-					add_ideas = FRA_occupation_costs_4
-					load_focus_tree = vichy_french_focus
-					FRA = {
-						transfer_units_fraction = {
-							target = event_target:vichy_france
-							size = 0.9
-							stockpile_ratio = 0.7
-							army_ratio = 0.5
-							navy_ratio = 0.85
-							air_ratio = 1.0
-						}
-					}
-				}
-			}
-			random_country = {
-				limit = {
-					has_focus_tree = vichy_french_focus
-				}
-				GER = {
-					give_guarantee = PREV
-				}
-				every_unit_leader = {
-					limit = {
-						has_id = 101 #de Gaulle
-					}
-					set_nationality = FRA
-				}
-				every_army_leader = {
-					limit = {
-						NOT = { has_trait = old_guard }
-					}
-					set_nationality = FRA
-				}
-				FRA = {
-					every_unit_leader = {
-						limit = {
-							OR = {
-								has_trait = old_guard
-								has_trait = old_guard_navy
-							}
-						}
-						set_nationality = PREV.PREV
-					}
-					every_navy_leader = {
-						limit = {
-							has_id = 102 #Darlan
-						}
-						set_nationality = PREV.PREV
-					}
-				}
-			}
-			FROM = {
-				clr_country_flag = GER_dont_seize_gold_reserves_flag
-			}
-			hidden_effect = {
-				set_capital = { state = 539 }
-
-				transfer_state = 539
-				transfer_state = 772
-				transfer_state = 773
-				transfer_state = 660
-				transfer_state = 774
-				transfer_state = 775
-				transfer_state = 310
-				transfer_state = 694
-				transfer_state = 730
-				transfer_state = 641
-				transfer_state = 635
-				transfer_state = 734
-
-				add_state_core = 539
-				add_state_core = 772
-				add_state_core = 773
-				add_state_core = 660
-				add_state_core = 774
-				add_state_core = 775
-				add_state_core = 310
-				add_state_core = 694
-				add_state_core = 730
-				add_state_core = 641
-				add_state_core = 635
-				add_state_core = 734
-
-				
-
-
-
-				}
-
-			}
-		
-		}
-
-
-
 
 		PMMM_FRA_add_legitimacy = {
 			activation = {
@@ -290,6 +27,59 @@ PMMM_FRA = {
 				}
 			}
 		}
+
+		PMMM_FRA_take_over_west_africa = {
+        allowed = {
+            tag = FRA
+        }
+		available = {
+			has_global_flag = PMMM_FRA_CAP
+			OR = {
+			check_variable = {
+   			 	var = FRA_PMMM_Legit
+   			 	value = 60
+   			 	compare = greater_than_or_equals
+				tooltip = PMMM_FRA_mind_60_legi_tt
+			}
+			has_completed_focus = FRA_intervention_in_west_africa
+			}
+		}
+        icon = mission_icon
+        fire_only_once = yes
+        days_remove = 30
+		
+        modifier = {
+            political_power_cost = 0.1
+        }
+        remove_effect = {
+			#if = {
+			#	limit = { NOT = {has_completed_focus = FRA_intervention_in_west_africa} }
+			#	complete_focus = FRA_intervention_in_west_africa
+			#}
+
+            transfer_state = 776
+			transfer_state = 777
+			transfer_state = 781
+			transfer_state = 778
+			transfer_state = 779
+			transfer_state = 556
+			transfer_state = 899
+			transfer_state = 898
+			transfer_state = 780
+			transfer_state = 272
+			transfer_state = 557
+			transfer_state = 786
+			transfer_state = 782
+			transfer_state = 515
+			transfer_state = 775
+        }
+        cancel_trigger = {
+
+        }
+        cancel_effect = {
+
+        }
+    }
 
 
 
@@ -345,7 +135,8 @@ PMMM_FRA = {
 							}	
 						}
 						promote_leader = yes				
-					}		
+					}	
+						
 				}
 	
 				}

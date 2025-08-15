@@ -6,7 +6,15 @@ neutral_nation:0 "Neutral Nation"
 
 PMMM_FRA:0 "French Legitimacy"
 PMMM_FRA_desc:0 "Current Legitimacy: [?FRA_PMMM_Legit]"
-FRA_PMMM_ADD_1_LEGIT_TT:0 "Add &G1&! &YLegitimacy&!"
-FRA_PMMM_ADD_5_LEGIT_TT:0 "Add &G5&! &YLegitimacy&!"
+FRA_PMMM_ADD_1_LEGIT_TT:0 "Add G1! YLegitimacy!"
+FRA_PMMM_ADD_5_LEGIT_TT:0 "Add G5! YLegitimacy!"
+PMMM_FRA_add_legitimacy:0 "Add 1 Legitimacy"
+PMMM_FRA_CAP:0 "France has fallen"
+PMMM_FRA_idea_easy_trade:0 "Allied Trade Deals"
+
+PMMM_FRA_mind_20_legi_tt:0 "At least Y20 Legitimacy!"
+PMMM_FRA_mind_60_legi_tt:0 "At least Y60 Legitimacy!"
+
+PMMM_FRA_hinweis_auf_decision_1:0 "By completing this Focus you get access to the decision YTake over West Africa!. \nIf you have more than Y60 Legitimacy! you Rdont! need to do this Focus"
 
 LIT_united_baltic:0 "United Baltics"
