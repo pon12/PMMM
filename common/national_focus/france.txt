@@ -4194,7 +4194,9 @@
 				level = 2
 			}
 			add_ideas = PMMM_FRA_idea_easy_trade
-			
+			unlock_decision_tooltip = { decision = PMMM_FRA_take_over_west_africa }
+			unlock_decision_tooltip = { decision = PMMM_FRA_take_over_syria }
+			unlock_decision_tooltip = { decision = PMMM_FRA_take_over_madagascar }
 			
 		}
 	}
@@ -4237,7 +4239,7 @@
 	focus = {
 		id = FRA_intervention_in_west_africa
 		icon = GFX_goal_generic_position_armies
-		x = -3
+		x = -2
 		y = 1
 		offset = {
 			x = 0
@@ -4270,7 +4272,7 @@
 	focus = {
 		id = FRA_intervention_in_syria
 		icon = GFX_goal_generic_position_armies
-		x = -1
+		x = 0
 		y = 1
 		offset = {
 			x = 0
@@ -4286,9 +4288,9 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				FRA_controls_syria = yes
-			}
+			#NOT = {
+			#	FRA_controls_syria = yes
+			#}
 		}
 		
 		bypass = {
@@ -4299,53 +4301,18 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_syria }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_syria }
-			unlock_decision_tooltip = { decision = FRA_invasion_in_syria }
+			#unlock_decision_tooltip = { decision = FRA_prepare_coup_in_syria }
+			#unlock_decision_tooltip = { decision = FRA_promise_independence_to_syria }
+			#unlock_decision_tooltip = { decision = FRA_invasion_in_syria }
+			custom_effect_tooltip = PMMM_FRA_hinweis_auf_decision_2
 		}
 	}
 	
-	focus = {
-		id = FRA_intervention_in_central_africa
-		icon = GFX_goal_generic_position_armies
-		x = 1
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = FRA_appeal_to_overseas_territories
-		}
-		relative_position_id = FRA_appeal_to_overseas_territories
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			NOT = {
-				FRA_controls_central_africa = yes
-			}
-		}
-		
-		bypass = {
-
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_central_africa }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_central_africa }
-			unlock_decision_tooltip = { decision = FRA_invasion_in_central_africa }
-		}
-	}
+	
 	focus = {
 		id = FRA_intervention_in_madagascar
 		icon = GFX_goal_generic_position_armies
-		x = 3
+		x = 2
 		y = 1
 		offset = {
 			x = 0
@@ -4361,19 +4328,7 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				543 = {
-					OR = {
-						is_controlled_by = ROOT
-						CONTROLLER = {
-							OR = {
-								is_in_faction_with = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-			}
+			
 		}
 		
 		bypass = {
@@ -4384,8 +4339,9 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_madagascar }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_madagascar }
+			#unlock_decision_tooltip = { decision = FRA_prepare_coup_in_madagascar }
+			#unlock_decision_tooltip = { decision = FRA_promise_independence_to_madagascar }
+			custom_effect_tooltip = PMMM_FRA_hinweis_auf_decision_3
 		}
 	}
 	focus = {
@@ -4402,7 +4358,7 @@
 			focus = FRA_intervention_in_syria
 			
 			focus = FRA_intervention_in_west_africa
-			focus = FRA_intervention_in_central_africa
+			
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
 		
@@ -4411,15 +4367,7 @@
 			factor = 1
 		}
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				has_legitimacy > 90
-			}
-			else = {
-				num_of_factories > 24
-			}
+			
 		}
 		
 		bypass = {

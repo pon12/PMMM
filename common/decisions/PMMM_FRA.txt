@@ -34,28 +34,32 @@ PMMM_FRA = {
         }
 		available = {
 			has_global_flag = PMMM_FRA_CAP
+			has_completed_focus = FRA_appeal_to_overseas_territories
 			OR = {
 			check_variable = {
    			 	var = FRA_PMMM_Legit
-   			 	value = 60
+   			 	value = 20
    			 	compare = greater_than_or_equals
-				tooltip = PMMM_FRA_mind_60_legi_tt
+				tooltip = PMMM_FRA_mind_20_legi_tt
 			}
 			has_completed_focus = FRA_intervention_in_west_africa
 			}
 		}
-        icon = mission_icon
+        icon = generic_operation
         fire_only_once = yes
-        days_remove = 30
+        #days_remove = 30
 		
-        modifier = {
-            political_power_cost = 0.1
-        }
-        remove_effect = {
-			#if = {
-			#	limit = { NOT = {has_completed_focus = FRA_intervention_in_west_africa} }
-			#	complete_focus = FRA_intervention_in_west_africa
-			#}
+        complete_effect = {
+			if = {
+				limit = { NOT = {has_completed_focus = FRA_intervention_in_west_africa} }
+				unlock_national_focus = FRA_intervention_in_west_africa
+				subtract_from_variable = {
+				var = FRA_PMMM_Legit
+				value = 20
+				tooltip = PMMM_FRA_minus_20_legi_tt
+			}
+			}
+			
 
             transfer_state = 776
 			transfer_state = 777
@@ -73,12 +77,86 @@ PMMM_FRA = {
 			transfer_state = 515
 			transfer_state = 775
         }
-        cancel_trigger = {
+    
+    }
+	PMMM_FRA_take_over_syria = {
+        allowed = {
+            tag = FRA
+        }
+		available = {
+			has_global_flag = PMMM_FRA_CAP
+			has_completed_focus = FRA_appeal_to_overseas_territories
+			OR = {
+			check_variable = {
+   			 	var = FRA_PMMM_Legit
+   			 	value = 20
+   			 	compare = greater_than_or_equals
+				tooltip = PMMM_FRA_mind_20_legi_tt
+			}
+			has_completed_focus = FRA_intervention_in_syria
+			}
+		}
+        icon = generic_operation
+        fire_only_once = yes
+        #days_remove = 30
+		
+        complete_effect = {
+			if = {
+				limit = { NOT = {has_completed_focus = FRA_intervention_in_syria} }
+				unlock_national_focus = FRA_intervention_in_syria
+				subtract_from_variable = {
+				var = FRA_PMMM_Legit
+				value = 20
+				tooltip = PMMM_FRA_minus_20_legi_tt
+			}
+			}
+			
+
+            transfer_state = 553
+			transfer_state = 554
+			transfer_state = 680
+			transfer_state = 677
+			transfer_state = 799
+        }
+    
+    }
+	PMMM_FRA_take_over_madagascar = {
+        allowed = {
+            tag = FRA
+        }
+		available = {
+			has_global_flag = PMMM_FRA_CAP
+			has_completed_focus = FRA_appeal_to_overseas_territories
+			OR = {
+			check_variable = {
+   			 	var = FRA_PMMM_Legit
+   			 	value = 20
+   			 	compare = greater_than_or_equals
+				tooltip = PMMM_FRA_mind_20_legi_tt
+			}
+			has_completed_focus = FRA_intervention_in_madagascar
+			}
+		}
+        icon = generic_operation
+        fire_only_once = yes
+        #days_remove = 30
+		
+        complete_effect = {
+			if = {
+				limit = { NOT = {has_completed_focus = FRA_intervention_in_madagascar} }
+				unlock_national_focus = FRA_intervention_in_syria
+				subtract_from_variable = {
+				var = FRA_PMMM_Legit
+				value = 20
+				tooltip = PMMM_FRA_minus_20_legi_tt
+			}
+			}
+			
+
+            transfer_state = 543
 
         }
-        cancel_effect = {
-
-        }
+    
     }
 
 
