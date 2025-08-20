@@ -9245,15 +9245,14 @@ focus_tree = {
 		}
 	}
 
-
 	focus = {
 		id = GER_an_invincible_army
 		icon = GFX_focus_GER_german_army_invincible
-		prerequisite = { focus = GER_demonstration_of_military_achievements }
+		prerequisite = { focus = GER_the_triumphant_will }
 
-		x = 0
+		x = -3
 		y = 1
-		relative_position_id = GER_demonstration_of_military_achievements
+		relative_position_id = GER_the_triumphant_will
 		cost = 5
 		available = {
 			surrender_progress < 0.05
