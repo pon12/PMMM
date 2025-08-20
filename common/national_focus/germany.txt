@@ -9119,44 +9119,32 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 
 		bypass = {
-
 		}
 
 		available = {
-			is_subject = no
-			has_army_manpower = { size > 724999 } #80 div
 		}
 		
 		cancel = {
-			is_subject = yes
 		}
 		cancel_if_invalid = yes
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			add_state_core = 69
-			add_state_core = 972
-			add_state_core = 74
-			transfer_state = 69
-			transfer_state = 972
-			transfer_state = 74
-			
-
-			
-
-			add_named_threat = { threat = 4 name = GER_demand_sudetenland_threat }
+			hidden_effect = {
+				69 = { add_core_of = GER }
+				74 = { add_core_of = GER }
+				add_to_variable = { GER_industrial_consumer_goods_factor = -0.02}
+			}
+			add_war_support = 0.1
+			add_stability = 0.05
+			POL = { transfer_state = 72 }
+			GER = { transfer_state = 69 }
+			GER = { transfer_state = 74 }
+			GER = { transfer_state = 972 }
+			news_event = { hours = 6 id = JFU_events.6 }
+			add_named_threat = { threat = 5 name = GER_demand_sudetenland_threat }
+			set_country_flag = sudetenland_acquired
 		}
 	}
 	
@@ -9171,22 +9159,9 @@ focus_tree = {
 		cost = 5
 
 		bypass = {
-
 		}
 
 		available = {
-			is_subject = no
-			HUN = { 
-				is_friend_or_potential_friend_of_GER = yes
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			OR = {
-				owns_state = 69
-				owns_state = 972
-			}
 		}
 
 		ai_will_do = {
@@ -9203,21 +9178,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
 		
 		completion_reward = {
-			# HUN = {
-			# 	country_event = { id = germany.51 }
-			# 	event_option_tooltip = germany.51.a
-			# }
-			HUN = {
-				transfer_state = 664
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-			every_other_country = {
-				limit = {
-					is_faction_leader = yes
+			if = { limit = { country_exists = HUN }   
+				HUN = {
+					transfer_state = 664
+					country_event = { id = JFU_events.5 }
 				}
-				reverse_add_opinion_modifier = { target = HUN modifier = GER_first_vienna_award_other }
 			}
+			else = { transfer_state = 664 }			
 		}
 	}
 	
@@ -9234,88 +9201,50 @@ focus_tree = {
 		relative_position_id = GER_first_vienna_award
 		cost = 10
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
-
 		will_lead_to_war_with = CZE
 
 		bypass = {
-
 		}
 		
 		available = { 
-			is_subject = no
-			has_army_manpower = { size > 749999 }
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-				set_global_flag = end_of_czechoslovakia
-				#CZE = { country_event = germany.53 }
-				GER = { transfer_state = 9 }
-				GER = { transfer_state = 75 }
-				9 = {set_compliance = 40}
-				75 = {set_compliance = 40}
-				HUN = { transfer_state = 70 }
-				HUN = { transfer_state = 71 }
-				HUN = { transfer_state = 73 }
-				POL = { transfer_state = 72 }
-
-				HUN = { add_war_support = 0.1}
-				GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
-				GER_seize_gold_reserves_in_europe_peacefully = yes
-
-				add_to_variable = { var = GER_mefo_bill_counter value = -10 }
-					
-				
-			}
-		
-	}
-
-	focus = {
-		id = GER_demonstration_of_military_achievements
-		icon = GFX_focus_GER_demonstration_of_military_achievements
-		prerequisite = { focus = GER_anschluss }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_anschluss
-		cost = 5
-		available = {
-			surrender_progress < 0.1
-			custom_trigger_tooltip = { 
-				tooltip = GER_demonstration_of_military_achievements_trigger
-				OR = {
-					num_subjects > 2
-					check_variable = { GER_occupied_states_europe > 19 }
+			HUN = {transfer_state = 70}
+			HUN = {transfer_state = 71}
+			HUN = {transfer_state = 73}
+			annex_country = { target = CZE }
+			
+			hidden_effect = {
+				country_event = { hours = 6 id = news.61 }
+				every_state = {
+					limit = {
+						AND = {
+							is_core_of = CZE
+							OR = {
+								NOT = { is_core_of = GER }
+								NOT = { is_core_of = GER }
+							}
+							OR = {
+								is_controlled_by = GER
+								is_controlled_by = HUN 
+							}
+							NOT = { state = 667 }
+						}
+					}
+					add_compliance = 50
 				}
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 50000 } 			
+				add_to_variable = { GER_industrial_consumer_goods_factor = -0.07}		
 			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_country_leader_trait = GER_loyalty_of_wehrmacht
+			set_global_flag = end_of_czechoslovakia
+			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }			
 		}
 	}
+
 
 	focus = {
 		id = GER_an_invincible_army
