@@ -2249,50 +2249,14 @@
 		x = 6
 		y = 1
 		
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_form_the_popular_front
-			}
-		}
-		offset = {
-			x = -9
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FRA_revive_the_national_bloc
-			}
-		}
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = FRA_invite_communist_ministers
-					has_completed_focus = FRA_utilize_the_leagues
-				}
-			}
-		}
+		
 
 		prerequisite = {
 			focus = FRA_reform_the_labour_laws
 			focus = FRA_protect_the_rights_of_man
 		}
 		relative_position_id = FRA_reform_the_labour_laws
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2303,12 +2267,7 @@
 		}
 
 		available = {
-			NOT = {
-				OR = {
-					has_completed_focus = FRA_invite_communist_ministers
-					has_completed_focus = FRA_utilize_the_leagues
-				}
-			}
+			
 		}
 		
 		bypass = {
@@ -2386,7 +2345,7 @@
 			focus = FRA_review_foreign_policy
 		}
 		relative_position_id = FRA_review_foreign_policy
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4219,9 +4178,9 @@
 			factor = 1
 		}
 		available = {
-			NOT = {
-				FRA_controls_north_africa = yes
-			}
+			#NOT = {
+			#	FRA_controls_north_africa = yes
+			#}
 		}
 		
 		bypass = {
@@ -4232,8 +4191,8 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_prepare_coup_in_north_africa }
-			unlock_decision_tooltip = { decision = FRA_promise_independence_to_north_africa }
+			#unlock_decision_tooltip = { decision = FRA_prepare_coup_in_north_africa }
+			#unlock_decision_tooltip = { decision = FRA_promise_independence_to_north_africa }
 		}
 	}
 	focus = {
@@ -4565,7 +4524,7 @@
 	focus = {
 		id = FRA_continue_the_fight
 		icon = GFX_goal_generic_major_war
-		x = 9
+		x = 7
 		y = 1
 		offset = {
 			x = 0
@@ -4649,7 +4608,7 @@
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = convoy
-				amount = 50
+				amount = 500
 			}
 			create_navy_leader = {
 				name = "Emilie Muselier"
@@ -4742,6 +4701,10 @@
 					amount = 100
 					producer = FRA
 				}
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
 			}
 		}
 	}
