@@ -204,10 +204,10 @@ focus_tree = {
 					}
 				}
 				random_select_amount = 2
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -257,10 +257,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -502,8 +502,8 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = GER_industrial_expansion
-				bonus = 2
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = industry
 			}
 
@@ -512,7 +512,7 @@ focus_tree = {
 			modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 3 
+        	   amount = 1
         	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8454,20 +8454,54 @@ focus_tree = {
 	}
 
 	focus = {
-		
 		id = GER_anschluss
 
 		icon = GFX_focus_GER_anschluss
 		alternate_icon = GFX_focus_GER_anschluss_historical
 
-		prerequisite = { focus = GER_reorganize_the_wehrmacht }
+		prerequisite = {  focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht}
 
-		x = 0
-		y = 3
-		relative_position_id = GER_reorganize_the_wehrmacht
+		x = 5
+		y = 1
+		relative_position_id = GER_heed_von_neuraths_concerns
 		cost = 10
 
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+
 		bypass = {
+			OR = {
+				AUS = {
+					OR = {
+						is_subject = yes
+						exists = no 
+						AND = {
+							is_in_faction = yes
+							NOT = { is_in_faction_with = GER }
+							any_other_country = {
+								is_in_faction_with = AUS
+								is_subject = no
+							}
+						}
+					}
+				}
+				GER = {
+					owns_state = 4
+					owns_state = 152
+					owns_state = 153
+					owns_state = 848
+					owns_state = 975
+					owns_state = 976
+				}
+			}
 		}
 
 		continue_if_invalid = yes
@@ -8475,19 +8509,66 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
-			date > 1937.06.01
+			has_war = no
+			is_subject = no
+			IF = {
+				limit = { has_dlc = "Gotterdammerung" }
+
+				custom_trigger_tooltip = {
+					tooltip = GER_anschluss_army_trigger_tt
+					fighting_army_strength_ratio = {
+						tag = AUS
+						ratio > global.deployed_manpower_ratio_needed_for_anschluss
+					}
+				}
+			}
+
+			ELSE = {
+				has_army_manpower = { size > 499999 }
+				
+				custom_trigger_tooltip = {
+				 	tooltip = GER_anschluss_eq_trigger_tt
+				 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 50 }
+				}
+			}
+			
+			NOT = { has_idea = rhineland_challenge_met }
+			if = {
+				limit = {
+					SWI = { has_completed_focus = SWI_gotthard_union }
+				}
+				NOT = { 
+					AUS = { has_idea = SWI_swiss_democratic_propaganda }
+				}
+			}
+
 		}
 
-		cancel = {
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				date < 1938.1.1
+			}
 		}
-
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY }
 
 		select_effect = {
+			AUS = {
+				country_event = {
+					id = AUS_political_events.77
+					hours = 12
+				}
+				set_country_flag = AUS_anschluss_process_has_begun_flag
+			}
 		}
 
 		completion_reward = {
+			hidden_effect = {
+				GER = { load_oob = "AUS_war_spawnins"}
+
+			}
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
@@ -8497,31 +8578,29 @@ focus_tree = {
 					GER_military_intelligence_service_operative_slot = 1
 					tooltip = operative_slot_tt
 				}
-				#GER_create_operative_otto_skorzeny = yes
-			}
-			hidden_effect = {
-				#GER_seize_gold_reserves_in_europe_peacefully = yes
-				add_to_variable = { GER_industrial_consumer_goods_factor = -0.1}				
+				GER_create_operative_otto_skorzeny = yes
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			hidden_effect = {
-				4 =		{ add_core_of = GER }
-				152 = 	{ add_core_of = GER }
-				153 = 	{ add_core_of = GER }
-				848 =   { add_core_of = GER }
-				975 =   { add_core_of = GER }
-				976 =   { add_core_of = GER }
-			}
-			add_political_power = 100
-			add_war_support = 0.1
-			add_stability = 0.05
-			annex_country = { target = AUS transfer_troops = no }
-			add_named_threat = { threat = 10 name = germany.4.t }
-			hidden_effect = { 
-				news_event = { hours = 6 id = news.36 }
-			}
-		}
-	}
+
+						#custom_effect_tooltip = if_they_accept_tt
+						add_political_power = 75
+						add_war_support = 0.1
+						add_stability = 0.05
+						army_experience = 10
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+
+						annex_country = { target = AUS transfer_troops = yes }
+												
+						GER_anschluss_modify_mefo_bills_or_economy_of_conquest = yes
+
+
+					
+				
+			
+		}}
+	
+
 	focus = {
 		id = GER_bribe_senior_officers
 		icon = GFX_goal_generic_dangerous_deal
@@ -9462,7 +9541,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = GER_anschluss
+		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
 
 		available = {
