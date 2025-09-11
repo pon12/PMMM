@@ -8460,10 +8460,10 @@ focus_tree = {
 		icon = GFX_focus_GER_anschluss
 		alternate_icon = GFX_focus_GER_anschluss_historical
 
-		prerequisite = { focus = GER_reorganize_the_wehrmacht }
+		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
 
-		x = 0
-		y = 3
+		x = -3
+		y = 2
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 10
 
@@ -8924,7 +8924,7 @@ focus_tree = {
 		alternate_icon = GFX_focus_ger_reichskommisariats_historical
 		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
 
-		x = -5
+		x = -10
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
@@ -9131,9 +9131,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
+
 			hidden_effect = {
 				69 = { add_core_of = GER }
 				74 = { add_core_of = GER }
+				972 = { add_core_of = GER }
 				add_to_variable = { GER_industrial_consumer_goods_factor = -0.02}
 			}
 			add_war_support = 0.1
@@ -9250,7 +9252,7 @@ focus_tree = {
 		icon = GFX_focus_GER_german_army_invincible
 		prerequisite = { focus = GER_the_triumphant_will }
 
-		x = -3
+		x = 0
 		y = 1
 		relative_position_id = GER_the_triumphant_will
 		cost = 5
@@ -9369,10 +9371,10 @@ focus_tree = {
 	focus = {
 		id = GER_the_triumphant_will
 		icon = GFX_goal_support_fascism
-		prerequisite = { focus = GER_reorganize_the_wehrmacht }
+		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
 		#mutually_exclusive = { focus = GER_integration_of_puppet_economies focus = GER_specialized_ss_commandos }
 
-		x = -1
+		x = -8
 		y = 2
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
@@ -9462,7 +9464,7 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		relative_position_id = GER_anschluss
+		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
 
 		available = {
@@ -9548,7 +9550,16 @@ focus_tree = {
 			807 = { add_claim_by = GER }
 			86 = { add_claim_by = GER }
 			762 = { add_claim_by = GER }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			transfer_state = 188 
+			188 = {
+				add_core_of = GER
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			add_named_threat = { threat = 3 name = GER_demand_memel_threat }
 
 			# random_other_country = {
@@ -9951,9 +9962,9 @@ focus_tree = {
 					}
 				}
 				effect_tooltip = {
-					transfer_state = 85
+					#transfer_state = 85
 					add_state_core = 85
-					transfer_state = 807
+					#transfer_state = 807
 					add_state_core = 807
 					remove_state_claim = 86
 					remove_state_claim = 762
