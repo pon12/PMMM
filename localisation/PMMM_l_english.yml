@@ -1,5 +1,7 @@
 ﻿l_english:
- PMMM_RAJ_nosplit:0 "RPMMM Note: India will not split appart once Independence is gained !!\n\n"
+
+#FRA
+PMMM_RAJ_nosplit:0 "RPMMM Note: India will not split appart once Independence is gained !!\n\n"
 player_training:0 "Peace Time Training"
 player_training_tt:0 "\nRRemoved when your Country enters War !!"
 neutral_nation:0 "Neutral Nation"
@@ -23,4 +25,69 @@ PMMM_FRA_hinweis_auf_decision_1:0 "By completing this Focus you get access to th
 PMMM_FRA_hinweis_auf_decision_2:0 "By completing this Focus you get access to the decision YTake over Syria!. \nIf you have more than Y20 Legitimacy! you Rdont! need to do this Focus"
 PMMM_FRA_hinweis_auf_decision_3:0 "By completing this Focus you get access to the decision YTake over Madagascar!. \nIf you have more than Y20 Legitimacy! you Rdont! need to do this Focus"
 
+#YUG
+YUG_Yugoslavian_cooperation:0 "Yugoslavian Unity"
+YUG_modify_dynamicm_tt:0 "Modify YYugoslavian Unity! by"
+YUG_italian_puppet_tt:0 "You will become a YItalian Puppet! once the focus YAxis Invasion! has been completed."
+YUG_german_puppet_tt:0 "You will become a YGerman Puppet! once the focus YAxis Invasion! has been completed."
+
+YUG_plot_against_paul:0 "Plot against Yugoslavia"
+YUG_seek_german_support:0 "Seek German Support"
+YUG_seek_italian_support:0 "Seek Italian Support"
+YUG_expand_ustasha_power_base:0 "Expand Ustasha Influence"
+YUG_seek_popular_support:0 "Seek Popular Support"
+YUG_axis_anvasion:0 "Axis Invasion"
+YUG_sell_slovenia:0 "Give up Slovenia"
+YUG_sell_macedonia:0 "Give up Macedonia"
+YUG_sell_west_banat:0 "Give up West Banat"
+YUG_sell_kosovo:0 "Give up Kosovo and Montenegro"
+YUG_recruitment_campaigns:0 "Recruitment Campaigns"
+YUG_recruitment_campaigns2:0 "Expand Military Industry"
+YUG_centrelaize_constricution_works:0 "Centralize Construction Works"
+YUG_centrelaize_constricution_works2:0 "Reorganize Argiculture"
+YUG_centrelaize_tooling_workshops:0 "Centralize Tooling Workshops"
+YUG_centrelaize_tooling_workshops2:0 "Expand Civilian Industry"
+ GYUG_fascism: "Greater Yugoslavia"
+ GYUG_fascism_ADJ: "Greater Yugoslavia"
+ GYUG_fascism_DEF: "Greater Yugoslavia"
+ GYUG_neutrality: "Greater Yugoslavia"
+ GYUG_neutralityADJ: "Greater Yugoslavia"
+ GYUG_neutrality_DEF: "Greater Yugoslavia"
+ 
+ I_YUG_fascism: "Yugoslavian Protectorate"
+ I_YUG_fascism_ADJ: "Yugoslavian Protectorate"
+ I_YUG_fascism_DEF: "Yugoslavian Protectorate"
+ I_YUG_neutrality: "Yugoslavian Protectorate"
+ I_YUG_neutrality_ADJ: "Yugoslavian Protectorate"
+ I_YUG_neutrality_DEF: "Yugoslavian Protectorate"
+ 
+ G_YUG_fascism: "Reichskommisariat Yugoslavien"
+ G_YUG_fascism_ADJ: "Reichskommisariat Yugoslavien"
+ G_YUG_fascism_DEF: "Reichskommisariat Yugoslavien"
+ G_YUG_neutrality: "Reichskommisariat Yugoslavien"
+ G_YUG_neutrality_ADJ: "Reichskommisariat Yugoslavien"
+ G_YUG_neutrality_DEF: "Reichskommisariat Yugoslavien"
+ 
+ Italien_Overlord:0 "Italien Prince"
+ ITA_FL:0 "Italien Loyalists"
+ ITA_F:0 "Italien Loyalists"
+ German_Overlord:0 "Reichskommisar"
+ GER_FL:0 "German Loyalists"
+ GER_F:0 "German Loyalists"
+ 
+ YUG_Militear_desc_tt:0 "You can Later ROnly! Complete YDevelope Slovenian Industry! ! \n\n"
+ YUG_Militear2_desc_tt:0 "You can Later ROnly! Complete YImprove Light Industry! ! \n\n"
+ 
+ YUG_idea_foreign_capital2:0 "Foreign Capital"
+ YUG_idea_axis_capital2:0 "Axis Investments"
+ general_staff2:0 "General Staff"
+ Yugoslavian_Army:0 "Yugoslavian Army"
+
+
+
+
+
+
+
 LIT_united_baltic:0 "United Baltics"
+

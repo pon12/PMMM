@@ -31,7 +31,7 @@ SAF_Politcal_manuevering_i = {
 	
 	icon = GFX_idea_ARG_political_corruption_modifier
 	
-	#modifier = {
+
 	
 	stability_factor = var_SAF_stab
 	war_support_factor = var_SAF_wars
@@ -40,14 +40,14 @@ SAF_Politcal_manuevering_i = {
 
 
 	custom_modifier_tooltip = SAF_modifier_tt_test1
-	#}
+	
 }
 SAF_Fast_Reamarment_i = {
 	enable = { always = yes }
 	
 	icon = GFX_idea_ARG_rapid_militarization
 	
-	#modifier = {
+
 	
 	stability_factor = var_SAF_2_stab
 	war_support_factor = var_SAF_2_wars
@@ -63,34 +63,32 @@ SAF_Fast_Reamarment_i = {
 	local_resources_factor = var_SAF_2_resc
 
 	
-	#}
+	
 }
 
-# YUG_Yugoslavian_cooperation = {
-# 	enable = { always = yes }
+YUG_Yugoslavian_cooperation = {
+ 	enable = { always = yes }
 	
-# 	icon = GFX_idea_ARG_subdue_dissension
+ 	icon = GFX_idea_ARG_subdue_dissension
 	
-# 	#modifier = {
 	
-# 	stability_factor = var_YUG_stab
-# 	political_power_factor = var_YUG_pp
-# 	war_support_factor = var_YUG_wars
-# 	consumer_goods_factor = var_YUG_consum
-# 	production_factory_max_efficiency_factor = var_YUG_eff_max
-# 	production_factory_efficiency_gain_factor = var_YUG_eff_gain
-# 	production_lack_of_resource_penalty_factor = var_YUG_resource
-# 	production_speed_arms_factory_factor = var_YUG_mil_speed
-# 	production_speed_industrial_complex_factor = var_YUG_civ_speed
-# 	production_speed_buildings_factor = var_YUG_build_speed
-# 	global_building_slots_factor = var_YUG_build_slots
-# 	conscription_factor = var_YUG_rec_pop
-# 	economy_cost_factor = var_YUG_law1
-# 	trade_laws_cost_factor = var_YUG_law2
-# 	mobilization_laws_cost_factor = var_YUG_law3
-# 	local_resources_factor = var_YUG_resc
-# 	fascism_drift = var_YUG_fascism
+ 	stability_factor = var_YUG_stab
+ 	political_power_factor = var_YUG_pp
+ 	war_support_factor = var_YUG_wars
+ 	consumer_goods_factor = var_YUG_consum
+ 	production_factory_max_efficiency_factor = var_YUG_eff_max
+ 	production_factory_efficiency_gain_factor = var_YUG_eff_gain
+ 	production_lack_of_resource_penalty_factor = var_YUG_resource
+ 	production_speed_arms_factory_factor = var_YUG_mil_speed
+ 	production_speed_industrial_complex_factor = var_YUG_civ_speed
+ 	production_speed_buildings_factor = var_YUG_build_speed
+ 	global_building_slots_factor = var_YUG_build_slots
+ 	conscription_factor = var_YUG_rec_pop
+ 	economy_cost_factor = var_YUG_law1
+ 	trade_laws_cost_factor = var_YUG_law2
+ 	mobilization_laws_cost_factor = var_YUG_law3
+ 	local_resources_factor = var_YUG_resc
+ 	fascism_drift = var_YUG_fascism
 
 	
-# 	#}
-# }
+ }

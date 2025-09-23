@@ -110,6 +110,25 @@ ideas = {
 				resource_trade_cost_bonus_per_factory = 12
 			}
 	}
+
+	Yugoslavian_Army = {
+			picture = ARG_war_division
+			allowed = {
+				original_tag = YUG
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = -0.10
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
 		
 		
 	}
