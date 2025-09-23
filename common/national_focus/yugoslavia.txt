@@ -1,6 +1,6 @@
 focus_tree = {
 	id = yugoslavian_focus
-	shared_focus = AXIS_pact_of_steel
+	#shared_focus = AXIS_pact_of_steel
 	country = {
 		factor = 0
 		

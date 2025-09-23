@@ -9247,6 +9247,99 @@ focus_tree = {
 		}
 	}
 
+focus = {
+		id = GER_the_triumphant_will
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
+		#mutually_exclusive = { focus = GER_integration_of_puppet_economies focus = GER_specialized_ss_commandos }
+
+		x = -8
+		y = 2
+		relative_position_id = GER_reorganize_the_wehrmacht
+		cost = 5
+	
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_improve_national_spirit_tooltip
+				OR = {
+					GER = { controls_state = 126 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 126
+					}
+				}
+				OR = {
+					GER = { controls_state = 16 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 16
+					}
+				}
+			}
+			64 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		cancel = {
+			AND = {
+				has_war = no
+				126 = {
+					owner = {
+						NOT = { tag = GER }
+						NOT = { is_in_faction_with = GER }
+					}
+				}
+				16 = {
+					owner = {
+						NOT = { tag = GER }
+						NOT = { is_in_faction_with = GER }
+					}
+				}
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+			swap_ideas = {
+				remove_idea = sour_loser
+				add_idea = triumphant_will
+			}	
+
+			IF = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				custom_effect_tooltip = GER_build_volkshalle_landmark_tt
+				hidden_effect = {
+					64 = {
+						remove_building = {
+							type = landmark_berlin_reichstag
+							level = 1
+							province = 6521
+						}
+						add_building_construction = {
+							type = landmark_berlin_volkshalle
+							level = 1
+							instant_build = yes
+							province = 6521
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+		}
+	}
+
+
+
+
+
+
 	focus = {
 		id = GER_an_invincible_army
 		icon = GFX_focus_GER_german_army_invincible
@@ -9368,93 +9461,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_the_triumphant_will
-		icon = GFX_goal_support_fascism
-		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
-		#mutually_exclusive = { focus = GER_integration_of_puppet_economies focus = GER_specialized_ss_commandos }
-
-		x = -8
-		y = 2
-		relative_position_id = GER_reorganize_the_wehrmacht
-		cost = 5
 	
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_improve_national_spirit_tooltip
-				OR = {
-					GER = { controls_state = 126 }
-					any_other_country = {
-						is_in_faction_with = GER
-						controls_state = 126
-					}
-				}
-				OR = {
-					GER = { controls_state = 16 }
-					any_other_country = {
-						is_in_faction_with = GER
-						controls_state = 16
-					}
-				}
-			}
-			64 = {
-				is_fully_controlled_by = ROOT
-			}
-		}
-
-		cancel = {
-			AND = {
-				has_war = no
-				126 = {
-					owner = {
-						NOT = { tag = GER }
-						NOT = { is_in_faction_with = GER }
-					}
-				}
-				16 = {
-					owner = {
-						NOT = { tag = GER }
-						NOT = { is_in_faction_with = GER }
-					}
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			swap_ideas = {
-				remove_idea = sour_loser
-				add_idea = triumphant_will
-			}	
-
-			IF = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				custom_effect_tooltip = GER_build_volkshalle_landmark_tt
-				hidden_effect = {
-					64 = {
-						remove_building = {
-							type = landmark_berlin_reichstag
-							level = 1
-							province = 6521
-						}
-						add_building_construction = {
-							type = landmark_berlin_volkshalle
-							level = 1
-							instant_build = yes
-							province = 6521
-						}
-					}
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-		}
-	}
 
 
 	focus = {

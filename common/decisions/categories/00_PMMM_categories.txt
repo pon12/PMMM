@@ -9,6 +9,7 @@ PMMM_FRA = {
 	icon = generic_political_actions
 	priority = 102
 	visible = {
+		original_tag = FRA
 	}	
 	visible_when_empty = yes
 }

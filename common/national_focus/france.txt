@@ -4159,42 +4159,7 @@
 			
 		}
 	}
-	focus = {
-		id = FRA_intervention_in_north_africa
-		icon = GFX_goal_generic_position_armies
-		x = 2
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = { 
-			focus = FRA_form_the_national_committee
-		}
-		relative_position_id = FRA_form_the_national_committee
-		
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			#NOT = {
-			#	FRA_controls_north_africa = yes
-			#}
-		}
-		
-		bypass = {
 
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-		completion_reward = {
-			#unlock_decision_tooltip = { decision = FRA_prepare_coup_in_north_africa }
-			#unlock_decision_tooltip = { decision = FRA_promise_independence_to_north_africa }
-		}
-	}
 	focus = {
 		id = FRA_intervention_in_west_africa
 		icon = GFX_goal_generic_position_armies
@@ -4341,6 +4306,40 @@
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = FRA_intervention_in_north_africa
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 1
+		
+		prerequisite = { 
+			focus = FRA_form_the_national_committee
+		}
+		relative_position_id = FRA_form_the_national_committee
+		
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			#NOT = {
+			#	FRA_controls_north_africa = yes
+			#}
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			#unlock_decision_tooltip = { decision = FRA_prepare_coup_in_north_africa }
+			#unlock_decision_tooltip = { decision = FRA_promise_independence_to_north_africa }
 		}
 	}
 

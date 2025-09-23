@@ -18,7 +18,6 @@ JFU_SAF = {
 		cost = 0
 		#target_array = ENG
 		complete_effect = { 
-			hidden_effect = {recruit_character = SAF_jan_smuts}
 			
 	promote_character = SAF_jan_smuts
 	add_political_power = 100
