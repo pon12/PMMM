@@ -3,7 +3,9 @@ state={
 	name="STATE_717"
 	
 	state_category = pastoral
-
+	resources={
+		oil = 80 # was = 200
+	}
 	history={
 		owner = MAN
     add_core_of = NIX

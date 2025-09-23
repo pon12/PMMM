@@ -336,13 +336,13 @@
 			605 = {
 				add_resource = {
 					type = aluminium
-					amount = 8
+					amount = 100
 				}
 			}
 			325 = {
 				add_resource = {
 					type = aluminium
-					amount = 12
+					amount = 50
 				}
 			}
 			if = {
@@ -1020,10 +1020,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = JAP_zaibatsus_factories
@@ -1704,10 +1704,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 				set_state_flag = JAP_zaibatsus_factories
@@ -2357,7 +2357,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = JAP_armored_divisions
-				bonus = 0.75
+				bonus = 2
 				uses = 2
 				category = armor	
 			}
@@ -2921,10 +2921,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 6
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY1
@@ -2946,10 +2946,10 @@
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 6
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY2
