@@ -4306,6 +4306,7 @@
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.1
+			unlock_decision_tooltip = { decision = PMMM_FRA_take_over_north_africa }
 		}
 	}
 
@@ -4338,8 +4339,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			#unlock_decision_tooltip = { decision = FRA_prepare_coup_in_north_africa }
-			#unlock_decision_tooltip = { decision = FRA_promise_independence_to_north_africa }
+			custom_effect_tooltip = PMMM_FRA_hinweis_auf_decision_4
 		}
 	}
 

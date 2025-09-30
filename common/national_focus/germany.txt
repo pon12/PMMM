@@ -9954,7 +9954,7 @@ focus = {
 			
 			hidden_effect = {
 				POL = { load_oob = "POL_war_spawnins" }	
-				every_country = { remove_ideas = player_training }
+				#every_country = { remove_ideas = player_training }
 			}
 			
 			

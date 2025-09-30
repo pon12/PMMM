@@ -4,6 +4,9 @@ ideas = {
 		player_training = {
 			picture = hol_aloof_neutrality
 			
+			cancel = {
+				has_war = yes
+			}
 			
 
 			allowed_civil_war = {
@@ -108,6 +111,24 @@ ideas = {
 			
 			modifier = {
 				resource_trade_cost_bonus_per_factory = 12
+			}
+	}
+	PMMM_FRA_idea_exile_no_surrender = {
+			
+			picture = BEL_the_kings_surrender
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 500
 			}
 	}
 
