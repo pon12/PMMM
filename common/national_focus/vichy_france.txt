@@ -5,7 +5,7 @@
 		factor = 0
 		
 		modifier = {
-			add = 1
+			add = 11
 			tag = VFR
 		}
 	}
@@ -28,7 +28,8 @@
 			factor = 1
 		}
 		available = {
-			has_country_leader = { ruling_only = yes character = FRA_philippe_petain }
+			#has_country_leader = { ruling_only = yes character = FRA_philippe_petain }
+			has_global_flag = PMMM_FRA_CAP
 		}
 		
 		bypass = {
@@ -497,12 +498,12 @@
 				}
 				remove_ideas = VIC_produce_aircraft_parts
 			}
-			GER = { 
-				country_event = lar_end_the_occupation.1 
-				if = { limit = { has_idea = VIC_aircraft_parts }
-					remove_ideas = VIC_aircraft_parts
-				}
-			}
+			#GER = { 
+			#	country_event = lar_end_the_occupation.1 
+			#	if = { limit = { has_idea = VIC_aircraft_parts }
+			#		remove_ideas = VIC_aircraft_parts
+			#	}
+			#}
 		}
 	}
 	focus = {

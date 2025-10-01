@@ -4,6 +4,7 @@ PMMM_FRA = {
 		PMMM_FRA_add_legitimacy = {
 			activation = {
 				has_war_with = GER
+				NOT = { has_global_flag = PMMM_FRA_CAP }
 			}
 			available = {
 				always = no
@@ -154,6 +155,7 @@ PMMM_FRA = {
 			
 
             transfer_state = 543
+			transfer_state = 708
 
         }
     
@@ -192,7 +194,8 @@ PMMM_FRA_take_over_north_africa = {
 			}
 			
 
-            declare_war_on = { type = annex_everything    target = event_target:vichy_france }
+            declare_war_on = { type = annex_everything    target = VFR }
+			GER = { add_to_faction = VFR }
 
         }
     
@@ -201,9 +204,11 @@ PMMM_FRA_take_over_north_africa = {
 
 
 
+
 		PMMM_FRA_surrender_mission = {
 			activation = {
 				has_war_with = GER
+				NOT = { has_global_flag = PMMM_FRA_CAP }
 		}
 			available = {
 				or = {
@@ -220,6 +225,7 @@ PMMM_FRA_take_over_north_africa = {
 			selectable_mission = no
 			complete_effect = {
 				set_global_flag = PMMM_FRA_CAP
+				
 				FRA = { 
 					add_ideas = PMMM_FRA_idea_exile_no_surrender
 					set_cosmetic_tag = FRA_FREE 
@@ -228,23 +234,8 @@ PMMM_FRA_take_over_north_africa = {
 					remove_ideas = FRA_disjointed_government
 					remove_ideas = FRA_protected_by_the_maginot_line
 					
-				custom_effect_tooltip = france.20.a_tt
+				#custom_effect_tooltip = france.20.a_tt
 				set_country_flag = france_de_gaulle
-				hidden_effect =  {
-					add_country_leader_role = {
-						character = FRA_charles_de_gaulle
-						country_leader = {
-							expire = "1965.1.1"
-							ideology = conservatism
-							traits = {
-								
-							}	
-						}
-						promote_leader = yes				
-					}
-					
-				}
-	
 				}
 					
 				 
@@ -386,6 +377,9 @@ PMMM_FRA_take_over_north_africa = {
 					transfer_state = 641
 					transfer_state = 635
 					transfer_state = 734
+					transfer_state = 713
+					transfer_state = 706
+					transfer_state = 268
 	
 					add_state_core = 539
 					set_capital = { state = 539 }
@@ -412,6 +406,7 @@ PMMM_FRA_take_over_north_africa = {
 
 			timeout_effect = {
 				set_global_flag = PMMM_FRA_CAP
+				
 				FRA = { 
 					add_ideas = PMMM_FRA_idea_exile_no_surrender
 					set_cosmetic_tag = FRA_FREE 
@@ -420,21 +415,8 @@ PMMM_FRA_take_over_north_africa = {
 					remove_ideas = FRA_disjointed_government
 					remove_ideas = FRA_protected_by_the_maginot_line
 					
-				custom_effect_tooltip = france.20.a_tt
+				#custom_effect_tooltip = france.20.a_tt
 				set_country_flag = france_de_gaulle
-				hidden_effect =  {
-					add_country_leader_role = {
-						character = FRA_charles_de_gaulle
-						country_leader = {
-							expire = "1965.1.1"
-							ideology = conservatism
-							traits = {
-							}	
-						}
-						promote_leader = yes				
-					}		
-				}
-	
 				}
 					
 				 
@@ -464,6 +446,7 @@ PMMM_FRA_take_over_north_africa = {
 		
 				 hidden_effect = {
 					VFR = {
+						remove_ideas = neutral_nation
 						every_state = { #transfer French colonial empire
 							limit = {
 								is_controlled_by = FRA
@@ -575,6 +558,9 @@ PMMM_FRA_take_over_north_africa = {
 					transfer_state = 641
 					transfer_state = 635
 					transfer_state = 734
+					transfer_state = 713
+					transfer_state = 706
+					transfer_state = 268
 	
 					add_state_core = 539
 					set_capital = { state = 539 }
@@ -600,16 +586,7 @@ PMMM_FRA_take_over_north_africa = {
 
 
 
-
-
-
-
-
-
-
-
-
-	}
+}
 
 
 

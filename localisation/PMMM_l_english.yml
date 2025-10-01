@@ -24,7 +24,7 @@ PMMM_FRA_add_legitimacy:0 "Add 1 Legitimacy"
 PMMM_FRA_CAP:0 "France has fallen"
 PMMM_FRA_idea_easy_trade:0 "Allied Trade Deals"
 PMMM_FRA_idea_exile_no_surrender:0 "No Surrender"
-
+Victor_of_france:0 "Fighter for France"
 
 PMMM_FRA_mind_20_legi_tt:0 "At least Y20 Legitimacy!"
 PMMM_FRA_mind_60_legi_tt:0 "At least Y60 Legitimacy!"

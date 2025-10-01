@@ -3852,6 +3852,16 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
+			create_country_leader = {
+				name = "Charles de Gaulle"
+				desc = "POLITICS_charles_de_gaulle_DESC"
+				picture = "Portrait_France_Charles_De_Gaulle.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+					Victor_of_france
+				}
+			}
 			remove_ideas = { FRA_defeatism }
 			add_offsite_building = {
 				type = industrial_complex

@@ -12,7 +12,7 @@ add_ideas = {
 	war_economy
     neutral_nation
 	limited_exports
-
+	VIC_produce_aircraft_parts
 
 }
 
