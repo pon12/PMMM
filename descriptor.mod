@@ -1,4 +1,4 @@
-version="0.2"
+version="0.4.1"
 picture="pmmm_thumbnail.png"
 tags={
 	"Historical"

@@ -107,9 +107,22 @@ YUG_centrelaize_tooling_workshops2:0 "Expand Civilian Industry"
  VFR_communism_ADJ: "Vichy France"
  VFR_communism_DEF: "Vichy France"
 
+ DSP_fascism: "Facist Spain"
+ DSP_fascism_ADJ: "Facist Spain"
+ DSP_fascism_DEF: "Facist Spain"
+ DSP_neutrality: "Kingdom of Spain"
+ DSP_neutrality_ADJ: "Kingdom of Spain"
+ DSP_neutrality_DEF: "Kingdom of Spain"
+ DSP_democratic: "Republican Spain"
+ DSP_democratic_ADJ: "Republican Spain"
+ DSP_democratic_DEF: "Republican Spain"
+ DSP_communism: "Spanish Soviet Republic"
+ DSP_communism_ADJ: "Spanish Soviet Republic"
+ DSP_communism_DEF: "Spanish Soviet Republic"
 
-
-
+ SPR_neutrality: "Nationalist Spain"
+ SPR_neutrality_ADJ: "Nationalist Spain"
+ SPR_neutrality_DEF: "Nationalist Spain"
 
 
 LIT_united_baltic:0 "United Baltics"

@@ -1,19 +1,24 @@
-﻿oob = "VFR_1936"
-capital = 26
+﻿oob = "DSP_1936"
+capital = 41
 set_research_slots = 3
-set_stability = 0.62
-set_war_support = 0.64
+set_stability = 0.50
+set_war_support = 0.50
 set_convoys = 200
 
-recruit_character = VFR_philippe_petain
+recruit_character = DSP_manuel_azana
+recruit_character = DSP_jose_diaz
+recruit_character = SPR_vicente_rojo_lluch
+recruit_character = SPR_jose_miaja
+recruit_character = SPR_jose_asensio_torrado
+recruit_character = SPR_valentin_gonzalez
+recruit_character = SPR_enrique_lister
+recruit_character = SPR_juan_modesto
 
 add_ideas = {
 	limited_conscription
-	war_economy
-    neutral_nation
+	civilian_economy
 	limited_exports
-	VIC_produce_aircraft_parts
-
+	SPR_national_strikes_3
 }
 
 # Starting tech
@@ -71,37 +76,24 @@ set_technology = {
 		basic_cruiser_armor_scheme = 1
 		mtg_transport = 1
 		basic_dp_light_battery = 1
-		#cruiser_submarines = 1
 	}
 
 
-#For start date 1939.1.1
-1939.1.1 = {
-	add_political_power = 0
-	oob = "NIX_1939"
-}
 
-#Politics for 1936.1.1
+
+
 set_politics = {
-	ruling_party = fascism
+	ruling_party = democratic
 	last_election = "1935.11.16"
 	election_frequency = 100
-	elections_allowed = no
+	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 4
-	fascism = 71
-	communism = 2
-	neutrality = 23
+	democratic = 47
+	fascism = 5
+	communism = 38
+	neutrality = 10
 }
 
-#Politics for 1939.1.1
-1939.1.1 = {
-	set_popularities = {
-		democratic = 25
-		fascism = 25
-		communism = 25
-		neutrality = 25
-	}
-}
+
 
