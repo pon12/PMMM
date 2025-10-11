@@ -75,10 +75,13 @@ if = {
 		#SPR_political_violence
 		SPR_national_strikes_3
 	}
+
+	recruit_character = SPR_jose_sanjurjo
+
 	recruit_character = SPR_niceto_alcala_zamora
 	recruit_character = SPR_jose_diaz
 	recruit_character = SPA_jose_antonio_primo_de_rivera
-	recruit_character = SPR_manuel_fal_conde
+	#recruit_character = SPR_manuel_fal_conde
 	recruit_character = SPR_antonio_cordon_garcia
 	#recruit_character = SPR_janos_galicz
 	recruit_character = SPA_francisco_franco

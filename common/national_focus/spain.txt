@@ -1,41 +1,4 @@
 ﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -131,19 +94,7 @@ focus_tree = {
 			    ideology = neutrality
 			    popularity = 0.05
 			}
-			hidden_effect = {
-				every_owned_state = {
-					limit = {
-						NOT = {
-							state = 290
-							state = 699
-							state = 783
-							state = 297
-						}
-					}
-					SPA_garrison_control_cost_calculation = yes
-				}
-			}
+			
 			add_political_power = 15
 		}
 	}
@@ -178,7 +129,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 200
+			add_political_power = 100
 		}
 	}
 
@@ -205,9 +156,40 @@ focus_tree = {
 			    ideology = neutrality
 			    popularity = 0.15
 			}
-			add_to_variable = { var = spa_civil_war_divisions_counter_var value = 5 }
-			custom_effect_tooltip = SPA_negotiate_carlist_support_tt
-			custom_effect_tooltip = SPA_negotiate_carlist_support_tt_2
+			division_template = {
+						name = "Requeté Carlista"
+						template_counter = 8
+						division_names_group = SPR_INF_03
+						is_locked = no
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+						}
+					}
+					172 = {
+						create_unit = {
+							division = "division_template = \"Requeté Carlista\" start_experience_factor = 0.3" 
+							owner = SPA
+							allow_spawning_on_enemy_provs = yes
+							count = 2
+						}
+					}
+					166 = {
+						create_unit = {
+							division = "division_template = \"Requeté Carlista\" start_experience_factor = 0.3" 
+							owner = SPA
+							allow_spawning_on_enemy_provs = yes
+							count = 2
+						}
+						create_unit = {
+							division = "division_template = \"Requeté Carlista\" start_experience_factor = 0.3" 
+							owner = SPA
+							prioritize_location = 3816
+							allow_spawning_on_enemy_provs = yes
+							count = 1
+						}
+					}
 		}
 	}
 
@@ -230,8 +212,46 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
 			army_experience = 10
-			add_to_variable = { var = spa_civil_war_divisions_counter_var value = 5 }
-			custom_effect_tooltip = SPA_the_army_of_africa_tt
+			division_template = {
+						name = "División del Ejército de África"
+						template_counter = 7
+						division_names_group = SPR_INF_06
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							artillery_brigade = { x = 3 y = 0 }
+							artillery_brigade = { x = 3 y = 1 }
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+						}
+					}
+					290 = {
+						create_unit = {
+							division = "name = \"Kubuhe Suwayan Gūsa\" division_template = \"División del Ejército de África\" start_experience_factor = 0.75 start_equipment_factor = 1"
+							owner = SPA
+						}
+						
+						create_unit = {
+							division = "name = \"[Ejército de África 1] \"division_template = \"[División del Ejército de África]\" start_experience_factor = 0.3" 
+							owner = SPA
+						}
+						create_unit = {
+							division = "division_template = \"División del Ejército de África\" start_experience_factor = 0.3" 
+							owner = SPA
+						}
+						create_unit = {
+							division = "division_template = \"División del Ejército de África\" start_experience_factor = 0.3" 
+							owner = SPA
+						}
+						
+					}
 		}
 	}
 

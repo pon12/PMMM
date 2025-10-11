@@ -1,0 +1,34 @@
+PMMM_SPR = {
+
+	PMMM_SPR_start_civilwar = {
+			activation = {
+				
+		}
+			available = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+			cancel_trigger = {
+			}
+
+			icon = mission_icon  
+			is_good = no
+			days_mission_timeout = 210
+			selectable_mission = no
+			fire_only_once = yes
+			complete_effect = {
+				
+		}
+		
+
+
+			timeout_effect = {
+				set_global_flag = PMMM_SPR_Civil_War_ongoing
+				set_global_flag = spanish_civil_war
+				declare_war_on = {
+					target = DSP
+				}
+		}
+		}
+}

@@ -33,4 +33,27 @@ characters = {
 			}
 
 	}
+
+
+
+	#nationalist
+	
+			
+				
+		SPR_jose_sanjurjo={
+
+			name="José Sanjurjo"
+			portraits={
+				civilian={
+					large=GFX_portrait_SPA_jose_sanjurjo
+				}
+			}
+			country_leader={
+				ideology=despotism
+				traits={ the_lion_of_the_rif }
+				expire="1965.1.1.1"
+				id=-1
+			}
+
+	}
 }

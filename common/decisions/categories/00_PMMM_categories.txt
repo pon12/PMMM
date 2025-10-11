@@ -14,6 +14,15 @@ PMMM_FRA = {
 	visible_when_empty = yes
 }
 
+PMMM_SPR = {
+	icon = generic_political_actions
+	priority = 102
+	visible = {
+		original_tag = SPR
+	}	
+	visible_when_empty = yes
+}
+
 # SOV_winter_war_d = {
 
 # 	priority = 102

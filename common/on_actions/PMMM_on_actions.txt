@@ -20,6 +20,8 @@ effect = {
 	COG = { country_lock_all_division_template = yes }
 	IRE = { country_lock_all_division_template = yes }
 	INS = { country_lock_all_division_template = yes }
+
+	SPR = { country_lock_all_division_template = no }
 	#bekommen spawn ins
 	GRE = { country_lock_all_division_template = yes } 
 	AUS = { country_lock_all_division_template = yes } 
