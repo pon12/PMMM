@@ -43,6 +43,16 @@ Victor_of_france = {
 	war_support_factor = 0.05
 	defensive_war_stability_factor = 0.2
 }
+Military_Junta = {
+	random = no
+	political_power_factor = -0.05
+	max_planning = 0.1
+	planning_speed = 0.1
+	production_speed_arms_factory_factor = 0.05
+	production_speed_industrial_complex_factor = -0.1
+	war_support_factor = 0.05
+
+}
 
 
 }
