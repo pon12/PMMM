@@ -3450,16 +3450,16 @@ focus_tree = {
 					159 = {
 						free_building_slots = {
 							building = arms_factory
-							size > 1
+							size > 3
 							include_locked = yes
 						}
 					}
 				}
 				159 = { #LOMBARDY (Milano)
-					add_extra_state_shared_building_slots = 2
+					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 4
 						instant_build = yes
 					}
 				}
@@ -3543,8 +3543,8 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = ITA_brescia_small_arms_industry
-				bonus = 0.75
-				uses = 1
+				bonus = 1
+				uses = 2
 				category = infantry_weapons
 			}
 		}
@@ -5649,14 +5649,14 @@ focus_tree = {
 					dockyard > 0
 					free_building_slots = {
 						building = dockyard
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -5665,14 +5665,14 @@ focus_tree = {
 					dockyard > 0
 					free_building_slots = {
 						building = dockyard
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -8413,9 +8413,6 @@ focus_tree = {
 					has_any_power_balance = no
 				}
 				if = {
-					limit = {
-						NOT = { has_completed_focus = ITA_defy_the_duce	}
-					}
 					ITA_initiate_balance_of_power_effect = yes
 				}
 			}
@@ -8487,7 +8484,6 @@ focus_tree = {
 			has_full_control_of_state = 837
 			has_full_control_of_state = 838
 			NOT = { has_global_flag = ITA_antifascist_civil_war_triggered_flag }
-			hidden_trigger = { NOT = { has_completed_focus = ITA_defy_the_duce } }
 		}
 
 		search_filters = {}
@@ -8982,7 +8978,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_la_battaglia_per_le_nascite }
 
 		x = 0
-		y = 5
+		y = 2
 		relative_position_id = ITA_la_battaglia_per_le_nascite
 		cost = 10
 		available = {
@@ -9150,7 +9146,6 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = { has_completed_focus = ITA_defy_the_duce }
 			}
 		}
 
@@ -9210,7 +9205,6 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = { has_completed_focus = ITA_defy_the_duce }
 			}
 		}
 
@@ -9259,13 +9253,6 @@ focus_tree = {
 					camicie_nere_security_militias = 1
 					popup = no
 				}
-			}
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ITA_disband_the_blackshirts }
-				}
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = ITA_renato_ricci
 			}
 		}
 	}
@@ -10370,23 +10357,11 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = { has_completed_focus = ITA_defy_the_duce }
 			}
 		}
 
 		x = 19
 		y = 1
-		offset = {
-			x = -16
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = ITA_culto_del_duce
-			}
-		}
 		offset = {
 			x = -12
 			y = 0
@@ -10516,7 +10491,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_albanian_oil
+		id = ITA_Albania_development
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = ITA_albanian_occupation }
 
@@ -10536,18 +10511,34 @@ focus_tree = {
 		completion_reward = {
 			44 = {
 				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
 					type = synthetic_refinery
 					level = 1
 					instant_build = yes
 				}
 				add_resource = {
 					type = oil
-					amount = 2
+					amount = 8
+				}
+			}
+			44 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			805 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			934 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -11084,7 +11075,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_request_control_of_french_territories
-		cost = 10
+		cost = 5
 		available = {
 
 		}
