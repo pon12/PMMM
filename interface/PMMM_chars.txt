@@ -1,0 +1,7 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_pmmm_spr_military_junta"
+        texturefile = "gfx/leaders/SPR/pmmm_spr_military_junta.dds"
+    }
+
+}

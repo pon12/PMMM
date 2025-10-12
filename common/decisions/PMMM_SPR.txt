@@ -1,0 +1,70 @@
+PMMM_SPR = {
+
+	PMMM_SPR_start_civilwar = {
+			activation = {
+				
+		}
+			available = {
+				hidden_trigger = {
+					always = no
+				}
+			}
+			cancel_trigger = {
+			}
+
+			icon = mission_icon  
+			is_good = no
+			days_mission_timeout = 210
+			selectable_mission = no
+			fire_only_once = yes
+			complete_effect = {
+				
+		}
+		
+
+
+			timeout_effect = {
+				set_global_flag = PMMM_SPR_Civil_War_ongoing
+				set_global_flag = spanish_civil_war
+				declare_war_on = {
+					target = DSP
+				}
+				
+		}
+		}
+
+	PMMM_SPR_end_of_civilwar = {
+			activation = {
+				has_global_flag = PMMM_SPR_Civil_War_ongoing
+				NOT = {has_global_flag = PMMM_SPR_Civil_war_end}
+		}
+			available = {
+				DSP = {exists = no}
+			}
+			cancel_trigger = {
+			}
+
+			icon = mission_icon  
+			is_good = no
+			days_mission_timeout = 1200
+			selectable_mission = no
+			fire_only_once = yes
+			complete_effect = {
+				set_global_flag = PMMM_SPR_Civil_war_end
+				set_global_flag = scw_over
+				add_stability = 0.05
+		}
+		
+
+
+			timeout_effect = {
+				set_global_flag = PMMM_SPR_Civil_war_end
+				set_global_flag = scw_over
+				annex_country = {
+					target = DSP
+				}
+				add_war_support = -0.05
+				
+		}
+		}
+}

@@ -4,6 +4,7 @@ PMMM_FRA = {
 		PMMM_FRA_add_legitimacy = {
 			activation = {
 				has_war_with = GER
+				NOT = { has_global_flag = PMMM_FRA_CAP }
 			}
 			available = {
 				always = no
@@ -144,7 +145,7 @@ PMMM_FRA = {
         complete_effect = {
 			if = {
 				limit = { NOT = {has_completed_focus = FRA_intervention_in_madagascar} }
-				unlock_national_focus = FRA_intervention_in_syria
+				unlock_national_focus = FRA_intervention_in_madagascar
 				subtract_from_variable = {
 				var = FRA_PMMM_Legit
 				value = 20
@@ -154,6 +155,47 @@ PMMM_FRA = {
 			
 
             transfer_state = 543
+			transfer_state = 708
+
+        }
+    
+    }
+
+PMMM_FRA_take_over_north_africa = {
+        allowed = {
+            tag = FRA
+        }
+		available = {
+			has_global_flag = PMMM_FRA_CAP
+			has_completed_focus = FRA_form_the_national_committee
+			OR = {
+			check_variable = {
+   			 	var = FRA_PMMM_Legit
+   			 	value = 20
+   			 	compare = greater_than_or_equals
+				tooltip = PMMM_FRA_mind_20_legi_tt
+			}
+			has_completed_focus = FRA_intervention_in_north_africa
+			}
+		}
+        icon = generic_operation
+        fire_only_once = yes
+        days_remove = 30
+		
+        remove_effect = {
+			if = {
+				limit = { NOT = {has_completed_focus = FRA_intervention_in_north_africa} }
+				unlock_national_focus = FRA_intervention_in_north_africa
+				subtract_from_variable = {
+				var = FRA_PMMM_Legit
+				value = 20
+				tooltip = PMMM_FRA_minus_20_legi_tt
+			}
+			}
+			
+
+            declare_war_on = { type = annex_everything    target = VFR }
+			GER = { add_to_faction = VFR }
 
         }
     
@@ -163,21 +205,10 @@ PMMM_FRA = {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 		PMMM_FRA_surrender_mission = {
 			activation = {
 				has_war_with = GER
+				NOT = { has_global_flag = PMMM_FRA_CAP }
 		}
 			available = {
 				or = {
@@ -194,49 +225,38 @@ PMMM_FRA = {
 			selectable_mission = no
 			complete_effect = {
 				set_global_flag = PMMM_FRA_CAP
+				
 				FRA = { 
+					add_ideas = PMMM_FRA_idea_exile_no_surrender
 					set_cosmetic_tag = FRA_FREE 
 					add_ideas = FRA_defeatism
 					remove_ideas = FRA_victors_of_wwi
 					remove_ideas = FRA_disjointed_government
 					remove_ideas = FRA_protected_by_the_maginot_line
 					
-				custom_effect_tooltip = france.20.a_tt
+				#custom_effect_tooltip = france.20.a_tt
 				set_country_flag = france_de_gaulle
-				hidden_effect =  {
-					add_country_leader_role = {
-						character = FRA_charles_de_gaulle
-						country_leader = {
-							expire = "1965.1.1"
-							ideology = conservatism
-							traits = {
-							}	
-						}
-						promote_leader = yes				
-					}	
-						
-				}
-	
 				}
 					
 				 
 					hidden_effect = {
 					GER = {
-						set_state_controller = 28
-						set_state_controller = 17
-						set_state_controller = 27
-						set_state_controller = 18
-						set_state_controller = 29
-						set_state_controller = 785
-						set_state_controller = 806
-						set_state_controller = 15
-						set_state_controller = 16
-						set_state_controller = 24
-						set_state_controller = 30
-						set_state_controller = 14
-						set_state_controller = 23
-						set_state_controller = 19	
+						transfer_state = 28
+						transfer_state = 17
+						transfer_state = 27
+						transfer_state = 18
+						transfer_state = 29
+						transfer_state = 785
+						transfer_state = 806
+						transfer_state = 15
+						transfer_state = 16
+						transfer_state = 24
+						transfer_state = 30
+						transfer_state = 14
+						transfer_state = 23
+						transfer_state = 19	
 				}
+				
 				 }
 	
 				 custom_effect_tooltip = establishing_vichy_tt
@@ -244,10 +264,8 @@ PMMM_FRA = {
 				 GER_set_consumer_goods_war_reparations = yes
 		
 				 hidden_effect = {
-					create_dynamic_country = {
-						original_tag = FRA
-						save_event_target_as = vichy_france
-						set_country_flag = vichy_france
+					VFR = {
+						remove_ideas = neutral_nation
 						every_state = { #transfer French colonial empire
 							limit = {
 								is_controlled_by = FRA
@@ -258,7 +276,7 @@ PMMM_FRA = {
 								}
 	
 							}
-							event_target:vichy_france = { transfer_state = PREV }
+							VFR = { transfer_state = PREV }
 						}
 						every_state = {
 							limit = { #set up Vichy continental holdings
@@ -295,13 +313,13 @@ PMMM_FRA = {
 								} #failsafe for weird shit (tm)
 							}
 							add_core_of = PREV
-							event_target:vichy_france = { transfer_state = PREV }
+							VFR = { transfer_state = PREV }
 						}
 						every_state = { #set up cores for French cores
 							limit = {
 								is_core_of = FRA
 								NOT = {
-									is_controlled_by = event_target:vichy_france
+									is_controlled_by = VFR
 								}
 							}
 							add_core_of = PREV
@@ -311,54 +329,25 @@ PMMM_FRA = {
 	
 	
 						
-						every_owned_state = {
-							limit = {
-								NOT = {
-									is_core_of = FRA
-								}
-							}
-							FRA = { add_state_claim = PREV } #Free France gets claims on all of Vichy, primarily so they can demand that shit back in a peacedeal
-						}
 						set_rule = { 
 							can_join_factions = no 
 							can_create_factions = no
 							can_not_declare_war = yes
 						}
 						set_capital = { state = 26 }
-						set_politics = {
-							ruling_party = fascism
-							elections_allowed = no
-						}
 						set_popularities = {
 							democratic = 22
 							fascism = 46
 							neutrality = 30
 							communism = 2
 						}
-						set_cosmetic_tag = FRA_VICHY
-						FRA = {
-							FRA_philippe_petain= {
-								set_nationality = event_target:vichy_france	
-							}
-						}
-						FRA_philippe_petain= {
-							add_country_leader_role = {
-								country_leader = {
-									expire = "1965.1.1"
-									ideology = fascism_ideology
-									traits = {
-										
-									}
-								}
-								promote_leader = yes
-							}
-						}
+
 						
 						add_ideas = FRA_occupation_costs_4
-						load_focus_tree = vichy_french_focus
+						#load_focus_tree = vichy_french_focus
 						FRA = {
 							transfer_units_fraction = {
-								target = event_target:vichy_france
+								target = VFR
 								size = 0.9
 								stockpile_ratio = 0.7
 								army_ratio = 0.5
@@ -368,48 +357,13 @@ PMMM_FRA = {
 						}
 					}
 				}
-				random_country = {
-					limit = {
-						has_focus_tree = vichy_french_focus
-					}
+				VFR = {
 					GER = {
 						give_guarantee = PREV
 					}
-					every_unit_leader = {
-						limit = {
-							has_id = 101 #de Gaulle
-						}
-						set_nationality = FRA
-					}
-					every_army_leader = {
-						limit = {
-							NOT = { has_trait = old_guard }
-						}
-						set_nationality = FRA
-					}
-					FRA = {
-						every_unit_leader = {
-							limit = {
-								OR = {
-									has_trait = old_guard
-									has_trait = old_guard_navy
-								}
-							}
-							set_nationality = PREV.PREV
-						}
-						every_navy_leader = {
-							limit = {
-								has_id = 102 #Darlan
-							}
-							set_nationality = PREV.PREV
-						}
-					}
-				}
-				FROM = {
-					clr_country_flag = GER_dont_seize_gold_reserves_flag
 				}
 				hidden_effect = {
-					set_capital = { state = 539 }
+					FRA = {
 	
 					transfer_state = 539
 					transfer_state = 772
@@ -423,8 +377,12 @@ PMMM_FRA = {
 					transfer_state = 641
 					transfer_state = 635
 					transfer_state = 734
+					transfer_state = 713
+					transfer_state = 706
+					transfer_state = 268
 	
 					add_state_core = 539
+					set_capital = { state = 539 }
 					add_state_core = 772
 					add_state_core = 773
 					add_state_core = 660
@@ -436,59 +394,50 @@ PMMM_FRA = {
 					add_state_core = 641
 					add_state_core = 635
 					add_state_core = 734
-	
+					}
 					
 	
 	
 	
-					}
-			}
+				}
+		}
+		
 
 
 			timeout_effect = {
 				set_global_flag = PMMM_FRA_CAP
+				
 				FRA = { 
+					add_ideas = PMMM_FRA_idea_exile_no_surrender
 					set_cosmetic_tag = FRA_FREE 
 					add_ideas = FRA_defeatism
 					remove_ideas = FRA_victors_of_wwi
 					remove_ideas = FRA_disjointed_government
 					remove_ideas = FRA_protected_by_the_maginot_line
 					
-				custom_effect_tooltip = france.20.a_tt
+				#custom_effect_tooltip = france.20.a_tt
 				set_country_flag = france_de_gaulle
-				hidden_effect =  {
-					add_country_leader_role = {
-						character = FRA_charles_de_gaulle
-						country_leader = {
-							expire = "1965.1.1"
-							ideology = conservatism
-							traits = {
-							}	
-						}
-						promote_leader = yes				
-					}		
-				}
-	
 				}
 					
 				 
 					hidden_effect = {
 					GER = {
-						set_state_controller = 28
-						set_state_controller = 17
-						set_state_controller = 27
-						set_state_controller = 18
-						set_state_controller = 29
-						set_state_controller = 785
-						set_state_controller = 806
-						set_state_controller = 15
-						set_state_controller = 16
-						set_state_controller = 24
-						set_state_controller = 30
-						set_state_controller = 14
-						set_state_controller = 23
-						set_state_controller = 19	
+						transfer_state = 28
+						transfer_state = 17
+						transfer_state = 27
+						transfer_state = 18
+						transfer_state = 29
+						transfer_state = 785
+						transfer_state = 806
+						transfer_state = 15
+						transfer_state = 16
+						transfer_state = 24
+						transfer_state = 30
+						transfer_state = 14
+						transfer_state = 23
+						transfer_state = 19	
 				}
+				
 				 }
 	
 				 custom_effect_tooltip = establishing_vichy_tt
@@ -496,10 +445,8 @@ PMMM_FRA = {
 				 GER_set_consumer_goods_war_reparations = yes
 		
 				 hidden_effect = {
-					create_dynamic_country = {
-						original_tag = FRA
-						save_event_target_as = vichy_france
-						set_country_flag = vichy_france
+					VFR = {
+						remove_ideas = neutral_nation
 						every_state = { #transfer French colonial empire
 							limit = {
 								is_controlled_by = FRA
@@ -510,7 +457,7 @@ PMMM_FRA = {
 								}
 	
 							}
-							event_target:vichy_france = { transfer_state = PREV }
+							VFR = { transfer_state = PREV }
 						}
 						every_state = {
 							limit = { #set up Vichy continental holdings
@@ -547,13 +494,13 @@ PMMM_FRA = {
 								} #failsafe for weird shit (tm)
 							}
 							add_core_of = PREV
-							event_target:vichy_france = { transfer_state = PREV }
+							VFR = { transfer_state = PREV }
 						}
 						every_state = { #set up cores for French cores
 							limit = {
 								is_core_of = FRA
 								NOT = {
-									is_controlled_by = event_target:vichy_france
+									is_controlled_by = VFR
 								}
 							}
 							add_core_of = PREV
@@ -563,54 +510,25 @@ PMMM_FRA = {
 	
 	
 						
-						every_owned_state = {
-							limit = {
-								NOT = {
-									is_core_of = FRA
-								}
-							}
-							FRA = { add_state_claim = PREV } #Free France gets claims on all of Vichy, primarily so they can demand that shit back in a peacedeal
-						}
 						set_rule = { 
 							can_join_factions = no 
 							can_create_factions = no
 							can_not_declare_war = yes
 						}
 						set_capital = { state = 26 }
-						set_politics = {
-							ruling_party = fascism
-							elections_allowed = no
-						}
 						set_popularities = {
 							democratic = 22
 							fascism = 46
 							neutrality = 30
 							communism = 2
 						}
-						set_cosmetic_tag = FRA_VICHY
-						FRA = {
-							FRA_philippe_petain= {
-								set_nationality = event_target:vichy_france	
-							}
-						}
-						FRA_philippe_petain= {
-							add_country_leader_role = {
-								country_leader = {
-									expire = "1965.1.1"
-									ideology = fascism_ideology
-									traits = {
-										
-									}
-								}
-								promote_leader = yes
-							}
-						}
+
 						
 						add_ideas = FRA_occupation_costs_4
-						load_focus_tree = vichy_french_focus
+						#load_focus_tree = vichy_french_focus
 						FRA = {
 							transfer_units_fraction = {
-								target = event_target:vichy_france
+								target = VFR
 								size = 0.9
 								stockpile_ratio = 0.7
 								army_ratio = 0.5
@@ -620,48 +538,13 @@ PMMM_FRA = {
 						}
 					}
 				}
-				random_country = {
-					limit = {
-						has_focus_tree = vichy_french_focus
-					}
+				VFR = {
 					GER = {
 						give_guarantee = PREV
 					}
-					every_unit_leader = {
-						limit = {
-							has_id = 101 #de Gaulle
-						}
-						set_nationality = FRA
-					}
-					every_army_leader = {
-						limit = {
-							NOT = { has_trait = old_guard }
-						}
-						set_nationality = FRA
-					}
-					FRA = {
-						every_unit_leader = {
-							limit = {
-								OR = {
-									has_trait = old_guard
-									has_trait = old_guard_navy
-								}
-							}
-							set_nationality = PREV.PREV
-						}
-						every_navy_leader = {
-							limit = {
-								has_id = 102 #Darlan
-							}
-							set_nationality = PREV.PREV
-						}
-					}
-				}
-				FROM = {
-					clr_country_flag = GER_dont_seize_gold_reserves_flag
 				}
 				hidden_effect = {
-					set_capital = { state = 539 }
+					FRA = {
 	
 					transfer_state = 539
 					transfer_state = 772
@@ -675,8 +558,12 @@ PMMM_FRA = {
 					transfer_state = 641
 					transfer_state = 635
 					transfer_state = 734
+					transfer_state = 713
+					transfer_state = 706
+					transfer_state = 268
 	
 					add_state_core = 539
+					set_capital = { state = 539 }
 					add_state_core = 772
 					add_state_core = 773
 					add_state_core = 660
@@ -688,15 +575,18 @@ PMMM_FRA = {
 					add_state_core = 641
 					add_state_core = 635
 					add_state_core = 734
-	
+					}
 					
 	
 	
 	
-					}
+				}
 		}
 		}
-	}
+
+
+
+}
 
 
 

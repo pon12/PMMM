@@ -3852,6 +3852,16 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
+			create_country_leader = {
+				name = "Charles de Gaulle"
+				desc = "POLITICS_charles_de_gaulle_DESC"
+				picture = "Portrait_France_Charles_De_Gaulle.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+					Victor_of_france
+				}
+			}
 			remove_ideas = { FRA_defeatism }
 			add_offsite_building = {
 				type = industrial_complex
@@ -4306,6 +4316,7 @@
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.1
+			unlock_decision_tooltip = { decision = PMMM_FRA_take_over_north_africa }
 		}
 	}
 
@@ -4338,8 +4349,7 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			#unlock_decision_tooltip = { decision = FRA_prepare_coup_in_north_africa }
-			#unlock_decision_tooltip = { decision = FRA_promise_independence_to_north_africa }
+			custom_effect_tooltip = PMMM_FRA_hinweis_auf_decision_4
 		}
 	}
 

@@ -1,0 +1,59 @@
+characters = {
+	DSP_manuel_azana = {
+			name = SPR_manuel_azana
+
+			portraits = {
+				civilian = {
+					large = "GFX_portrait_Manuel_Azana"
+				}
+			}
+			country_leader = {
+				ideology = conservatism
+				traits = { figurehead_president }
+				expire = "1965.1.1.1"
+				id = -1
+			}
+
+
+	}
+
+		DSP_jose_diaz={
+
+			name=SPR_jose_diaz
+			portraits={
+				civilian={
+					large=GFX_portrait_SPR_jose_diaz
+				}
+			}
+			country_leader={
+				ideology=stalinism
+				traits={ veteran_communist }
+				expire="1965.1.1.1"
+				id=-1
+			}
+
+	}
+
+
+
+	#nationalist
+	
+			
+				
+		SPR_jose_sanjurjo={
+
+			name="José Sanjurjo"
+			portraits={
+				civilian={
+					large=GFX_portrait_SPA_jose_sanjurjo
+				}
+			}
+			country_leader={
+				ideology=despotism
+				traits={ the_lion_of_the_rif }
+				expire="1965.1.1.1"
+				id=-1
+			}
+
+	}
+}

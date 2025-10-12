@@ -70,6 +70,10 @@ recruit_character = SOV_vasily_flug
 recruit_character = SOV_boris_shteifon
 
 
+add_dynamic_modifier = {
+	modifier = YUG_Yugoslavian_cooperation
+}
+
 if = {
 	limit = {
 		has_dlc = "Death or Dishonor"

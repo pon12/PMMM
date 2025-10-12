@@ -1,0 +1,14 @@
+characters = {
+	VFR_philippe_petain={
+		name=FRA_philippe_petain
+		portraits={
+			civilian={
+				large=GFX_portrait_FRA_philippe_petain
+			}
+		}
+		 country_leader = {
+            ideology = nazism
+            traits = {  }
+        }
+	}
+}

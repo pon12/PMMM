@@ -1,0 +1,7 @@
+spriteTypes = {	
+	SpriteType = { 
+		name = "GFX_idea_JAP_closed_eco"
+		texturefile = "gfx/interface/ideas/idea_JAP_closed_economy.dds"
+	}		
+}
+

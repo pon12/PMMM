@@ -1,41 +1,4 @@
 ﻿
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -92,9 +55,7 @@ focus_tree = {
 		id = SPA_a_great_spain
 
 		available = {
-			NOT = {
-				has_country_flag = SPR_spanish_elections_flag
-			}
+			
 		}
 		cancel_if_invalid = yes
 		
@@ -131,19 +92,7 @@ focus_tree = {
 			    ideology = neutrality
 			    popularity = 0.05
 			}
-			hidden_effect = {
-				every_owned_state = {
-					limit = {
-						NOT = {
-							state = 290
-							state = 699
-							state = 783
-							state = 297
-						}
-					}
-					SPA_garrison_control_cost_calculation = yes
-				}
-			}
+			
 			add_political_power = 15
 		}
 	}
@@ -178,7 +127,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 200
+			add_political_power = 100
 		}
 	}
 
@@ -205,9 +154,26 @@ focus_tree = {
 			    ideology = neutrality
 			    popularity = 0.15
 			}
-			add_to_variable = { var = spa_civil_war_divisions_counter_var value = 5 }
-			custom_effect_tooltip = SPA_negotiate_carlist_support_tt
-			custom_effect_tooltip = SPA_negotiate_carlist_support_tt_2
+			division_template = {
+						name = "Requeté Carlista"
+						template_counter = 8
+						division_names_group = SPR_INF_03
+						is_locked = no
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+						}
+					}
+	
+					176 = {
+						create_unit = {
+							division = "division_template = \"Requeté Carlista\" start_experience_factor = 0.3" 
+							owner = ROOT
+							count = 5
+						}
+						
+					}
 		}
 	}
 
@@ -229,9 +195,37 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
-			army_experience = 10
-			add_to_variable = { var = spa_civil_war_divisions_counter_var value = 5 }
-			custom_effect_tooltip = SPA_the_army_of_africa_tt
+			army_experience = 30
+			division_template = {
+						name = "División del Ejército de África"
+						template_counter = 7
+						division_names_group = SPR_INF_06
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 2 y = 0 }
+							artillery_brigade = { x = 3 y = 0 }
+							artillery_brigade = { x = 3 y = 1 }
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+						}
+					}
+					176 = {
+						create_unit = {
+							division = "division_template = \"División del Ejército de África\" start_experience_factor = 0.75 start_equipment_factor = 1"
+							owner = ROOT
+							count = 5
+							
+						}
+						
+						
+					}
 		}
 	}
 
@@ -253,65 +247,25 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
-			custom_effect_tooltip = SPA_secure_the_northern_garrisons_tt
-			hidden_effect = {
-				every_owned_state = {
-					limit = {
-						check_variable = { var = SPA_garrison_control value = 1 compare = equals }
-						OR = {
-							state = 171
-							state = 174
-							state = 788
-							state = 791
-							state = 176
-							state = 166
-							state = 172
-						}
-					}
-					set_state_flag = SPA_northern_garrisons_state_flag
-					add_to_variable = { var = SPA_garrison_control value = 3 }
-					SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 3 } }
-					SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 3 } }
-					SPA_garrison_control_cost_calculation = yes
-				}
-				every_owned_state = {
-					limit = {
-						check_variable = { var = SPA_garrison_control value = 2 compare = equals }
-						OR = {
-							state = 171
-							state = 174
-							state = 788
-							state = 791
-							state = 176
-							state = 166
-							state = 172
-						}
-					}
-					set_state_flag = SPA_northern_garrisons_state_flag
-					add_to_variable = { var = SPA_garrison_control value = 2 }
-					SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 2 } }
-					SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 2 } }
-					SPA_garrison_control_cost_calculation = yes
-				}
-				every_owned_state = {
-					limit = {
-						check_variable = { var = SPA_garrison_control value = 3 compare = equals }
-						OR = {
-							state = 171
-							state = 174
-							state = 788
-							state = 791
-							state = 176
-							state = 166
-							state = 172
-						}
-					}
-					set_state_flag = SPA_northern_garrisons_state_flag
-					add_to_variable = { var = SPA_garrison_control value = 1 }
-					SPR = { add_to_variable = { var = spa_civil_war_divisions_counter_var value = 1 } }
-					SPR = { subtract_from_variable = { var = spr_civil_war_divisions_counter_var value = 1 } }
-					SPA_garrison_control_cost_calculation = yes
-				}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 50
 			}
 		}
 	}
@@ -334,7 +288,8 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CIVIL_WAR}
 		completion_reward = {
-			custom_effect_tooltip = SPA_con_paquito_tt
+			add_manpower = 50000
+			#custom_effect_tooltip = SPA_con_paquito_tt
 			random_unit_leader = {
 				limit = {
 					has_id = 1108
@@ -354,8 +309,7 @@ focus_tree = {
 	focus = {
 		id = SPA_unify_the_nationalist_front
 		available = {
-			has_global_flag = spanish_civil_war
-			hidden_trigger = { always = no }
+			has_global_flag = PMMM_SPR_Civil_War_ongoing
 		}
 		bypass = {
 		}
@@ -365,13 +319,39 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SPA_con_paquito
-		cost = 5
+		cost = 1
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_STABILITY}
 		completion_reward = {
-			add_stability = 0.1
-			activate_mission = SPA_carlist_uprising_mission
+			add_stability = 0.05
+			if = {
+				limit = { has_government = fascism }
+					create_country_leader = {
+						name = "Military Junta"
+						picture = "GFX_portrait_SPA_military_junta"
+						ideology = nazism
+						expire = "1965.1.1"
+						traits = {
+							Military_Junta
+						}
+					}
+			}
+			if = {
+				limit = { has_government = neutrality }
+					create_country_leader = {
+						name = "Military Junta"
+						picture = "GFX_portrait_SPA_military_junta"
+						ideology = despotism
+						expire = "1965.1.1"
+						traits = {
+							Military_Junta
+						}
+					}
+			}
+			
+			
+			
 		}
 	}
 	
