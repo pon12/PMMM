@@ -900,98 +900,19 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
-			effect_tooltip = {
+			
 				add_manpower = 20000
 				POR = {
 					add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
 					add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
 				}
-			}
-			custom_effect_tooltip = SPA_the_iberian_pact_tt_2
-			POR = { country_event = { id = lar_spain.22 hours = 12 random_hours = 36 } }
+			
+			
+			
 		}
 	}
 
-	focus = {
-		id = SPA_the_iberian_pact
-		available = {
-			has_global_flag = scw_over
-			has_war = no
-			is_in_faction = no
-			POR = {
-				has_war = no
-				is_in_faction = no
-			}
-			NOT = { has_global_flag = POR_iberian_summit_in_progress_flag }
-		}
-		bypass = {
-			POR = { is_in_faction = yes }
-		}
-		prerequisite = { focus = SPA_portuguese_aid }
-		
-		icon = GFX_goal_generic_major_alliance
-		x = 0
-		y = 1
-		relative_position_id = SPA_portuguese_aid
-		cost = 10
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			custom_effect_tooltip = SPA_the_iberian_pact_tt
-			custom_effect_tooltip = SPA_the_iberian_pact_tt_2
-			POR = { country_event = { id = lar_spain.25 hours = 12 random_hours = 36 } }
-		}
-	}
-
-	focus = {
-		id = SPA_the_latin_bloc
-		available = {
-			has_global_flag = scw_over
-			NOT = { has_completed_focus = SPA_join_the_axis }
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_the_iberian_pact }
-		
-		icon = GFX_goal_generic_alliance
-		x = 0
-		y = 1
-		relative_position_id = SPA_the_iberian_pact
-		cost = 10
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-
-		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
-			}
-			create_faction = SPA_latin_bloc
-			every_other_country = {
-				limit = {
-					OR = {
-						original_tag = POR
-						original_tag = CAT
-						original_tag = NAV
-						original_tag = GLC
-						tag = VIC
-						original_tag = ITA
-					}
-					is_in_faction = no
-				}
-				country_event = { id = lar_spain.30 hours = 12 random_hours = 36 }
-			}
-			hidden_effect = { news_event = { id = lar_news.19 hours = 6 } }
-		}
-	}
+	
 
 	focus = {
 		id = SPA_expand_conscription

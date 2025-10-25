@@ -74,6 +74,7 @@ if = {
 		#SPR_military_disloyalty
 		#SPR_political_violence
 		SPR_national_strikes_3
+		SPA_death_before_surrender
 	}
 
 	recruit_character = SPR_jose_sanjurjo

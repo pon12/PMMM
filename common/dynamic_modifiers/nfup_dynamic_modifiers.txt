@@ -92,3 +92,11 @@ YUG_Yugoslavian_cooperation = {
 
 	
  }
+
+Spainish_Civil_War_Front = {
+	enable = { always = yes }
+	
+ 	icon = GFX_idea_chi_wargaming_division
+
+	
+}
